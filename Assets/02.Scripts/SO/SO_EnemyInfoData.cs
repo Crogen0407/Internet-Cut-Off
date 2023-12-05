@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 
-public class SO_EnemyInfoData : MonoBehaviour
+[CreateAssetMenu(menuName = "SO/EnemyInfoData", fileName = "New EnemyInfoData")]
+public class SO_EnemyInfoData : ScriptableObject
 {
-    public EnemyType EnemyType;
-    public int hp;
-    public float speed;
-    public float attack;
+    public EnemyType enemyType = EnemyType.Yellow;
+    public HealthSystem healthSystem;
+    public float moveSpeed = 1;
+    public float attackDamage = 1;
+    public float maxAttackRangeRadius = 0.5f;
 }

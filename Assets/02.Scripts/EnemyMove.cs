@@ -6,10 +6,11 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] private float _speed;
-
+    [SerializeField] private SO_EnemyInfoData _enemyInfoData;
+    
     private void Awake()
     {
-        
+        _enemyInfoData.healthSystem.Hp--;
     }
 
     private void Start()
