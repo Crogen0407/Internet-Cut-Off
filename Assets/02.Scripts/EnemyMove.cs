@@ -10,7 +10,8 @@ public class EnemyMove : MonoBehaviour
     
     private void Awake()
     {
-        _enemyInfoData.healthSystem.Hp--;
+        _enemyInfoData.healthSystem = new HealthSystem(3, () => { Debug.Log("으흑"); }, () => { Debug.Log("죽고싶지 않아"); });
+        _enemyInfoData.healthSystem.Hp-=3;
     }
 
     private void Start()

@@ -295,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0
+  _enemyInfoData: {fileID: 11400000, guid: 6f70501813835c641b42a064a700ad34, type: 2}
 --- !u!1 &416491435
 GameObject:
   m_ObjectHideFlags: 0
