@@ -6,7 +6,6 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private EnemyType _enemyType;
 
     private void Awake()
     {
