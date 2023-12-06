@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public bool isFindPlayer;
     
     //Components
+    private Rigidbody2D _rigidbody;
     private HealthSystem _healthSystem;
     private EnemyAttack _enemyAttack;
     private EnemyMovement _enemyMovement;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     
     private void Awake()
     {
+        _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthSystem = GetComponent<HealthSystem>();
         _enemyAttack = GetComponent<EnemyAttack>();
@@ -55,10 +57,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Collider2D colliders = Physics2D.OverlapCircle(transform.position, _enemyInfoData.maxAttackRangeRadius, _layerMask);
-        if (colliders != null && _enemyAttack.isAttacking == false)
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, _enemyInfoData.viewingRadius, _layerMask);
+        if (collider != null && _enemyAttack.isAttacking == false)
         {
-            _enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay);
+            //_enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay);
+            _rigidbody.velocity = new Vector2((collider.transform.position - transform.position).normalized.x * _enemyInfoData.moveSpeed, _rigidbody.velocity.y);
         }
     }
 
@@ -74,5 +77,6 @@ public class Enemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _enemyInfoData.maxAttackRangeRadius);
+        Gizmos.DrawWireSphere(transform.position, _enemyInfoData.viewingRadius);
     }
 }
