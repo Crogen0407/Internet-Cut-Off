@@ -14,9 +14,11 @@ public class Enemy : MonoBehaviour
     private HealthSystem _healthSystem;
     private EnemyAttack _enemyAttack;
     private EnemyMovement _enemyMovement;
+    private SpriteRenderer _spriteRenderer;
     
     private void Awake()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthSystem = GetComponent<HealthSystem>();
         _enemyAttack = GetComponent<EnemyAttack>();
         _enemyMovement = GetComponent<EnemyMovement>();
@@ -24,13 +26,30 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        switch (_enemyInfoData.enemyType)
+        {
+            //나중에 컬러값 예쁘게 바꾸기
+            case EnemyType.Yellow:
+                _spriteRenderer.color = Color.yellow;
+                break;
+            case EnemyType.Red:
+                _spriteRenderer.color = Color.red;
+                break;
+            case EnemyType.Blue:
+                _spriteRenderer.color = Color.blue;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
         _healthSystem.Damaged += () =>
         {
             Debug.Log("아야");
         };
         _healthSystem.Dead += () =>
         {
-            Debug.Log("밍...폭발");
+            //나중에 오브젝트 풀링으로 바꾸기
+            Destroy(gameObject);
         };
     }
 
