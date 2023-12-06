@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7273246246434260290}
   - component: {fileID: 1574269358406412}
   - component: {fileID: 4539960440389893376}
-  m_Layer: 0
-  m_Name: Circle
+  m_Layer: 8
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

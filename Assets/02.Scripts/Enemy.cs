@@ -60,10 +60,10 @@ public class Enemy : MonoBehaviour
         {
             Vector2 myPositionToPlayerPositionDirection = (collider.transform.position - transform.position).normalized;
             RaycastHit2D hit;
-            int layerMask2 = ~(LayerMask.GetMask("Enemy"));
+            int layerMask2 = ~(LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyBullet"));
                 
             hit = Physics2D.Raycast(transform.position, myPositionToPlayerPositionDirection, _enemyInfoData.viewingRadius, layerMask2);
-            if (hit != null && hit.transform.CompareTag("Player"))
+            if (hit.transform != null && hit.transform.CompareTag("Player"))
             {
                 Debug.DrawRay(transform.position, myPositionToPlayerPositionDirection * _enemyInfoData.viewingRadius);
                 if (Vector2.Distance(collider.transform.position, transform.position) < _enemyInfoData.maxAttackRangeRadius)

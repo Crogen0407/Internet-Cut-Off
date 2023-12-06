@@ -1,26 +1,33 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    public Vector2 fireDirection;
-    public float firePower = 5;
+    private PoolManager _poolManager;
     
-    private void Awake()
+    private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _poolManager = PoolManager.Instance;
     }
 
     private void OnEnable()
     {
-        try
+        StopCoroutine(OnDestroyCoroutine(10));
+        StartCoroutine(OnDestroyCoroutine(10));
+    }
+
+    private IEnumerator OnDestroyCoroutine(float destroyDelay)
+    {
+        yield return new WaitForSeconds(destroyDelay);
+        _poolManager.Push("EnemyBullet", gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.CompareTag("Untagged"))
         {
-            _rigidbody.velocity = fireDirection;
-        }
-        catch (NullReferenceException e)
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
+            _poolManager.Push("EnemyBullet", gameObject);
         }
     }
 }

@@ -6,8 +6,13 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public bool isAttacking;
-    [SerializeField] private GameObject _bullet;
-    
+    private PoolManager _poolManager;
+
+    private void Start()
+    {
+        _poolManager = PoolManager.Instance;
+    }
+
     public void Attack(float attackDamage, float attackDelay, Vector2 attackDirection)
     {
         StartCoroutine(AttackCoroutine(attackDamage, attackDelay, attackDirection));
@@ -17,9 +22,8 @@ public class EnemyAttack : MonoBehaviour
     {
         isAttacking = true;
         yield return new WaitForSeconds(attackDelay);
-        Debug.Log("dfdf");
-        GameObject bullet = Instantiate(_bullet, transform.position, Quaternion.identity);
-        bullet.GetComponent<EnemyBullet>().fireDirection = attackDirection;
+        Rigidbody2D bullet = _poolManager.Pop("EnemyBullet", transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+        bullet.AddForce(attackDirection * 10, ForceMode2D.Impulse);
         isAttacking = false;
     }
 }
