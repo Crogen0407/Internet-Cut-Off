@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     public bool isFindPlayer;
     
     //Components
-    private Rigidbody2D _rigidbody;
     private HealthSystem _healthSystem;
     private EnemyAttack _enemyAttack;
     private EnemyMovement _enemyMovement;
@@ -19,7 +18,6 @@ public class Enemy : MonoBehaviour
     
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthSystem = GetComponent<HealthSystem>();
         _enemyAttack = GetComponent<EnemyAttack>();
@@ -55,28 +53,40 @@ public class Enemy : MonoBehaviour
         };
     }
 
-    private void Update()
-    {
-        Collider2D collider = Physics2D.OverlapCircle(transform.position, _enemyInfoData.viewingRadius, _layerMask);
-        if (collider != null && _enemyAttack.isAttacking == false)
-        {
-            //_enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay);
-            _rigidbody.velocity = new Vector2((collider.transform.position - transform.position).normalized.x * _enemyInfoData.moveSpeed, _rigidbody.velocity.y);
-        }
-    }
-
     private void FixedUpdate()
     {
-        
-        if (_enemyAttack.isAttacking == false)
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, _enemyInfoData.viewingRadius, _layerMask);
+        if (collider != null)
         {
-            _enemyMovement.Move(_enemyInfoData.moveSpeed);
+            Vector2 myPositionToPlayerPositionDirection = (collider.transform.position - transform.position).normalized;
+            RaycastHit2D hit;
+            int layerMask2 = ~(LayerMask.GetMask("Enemy"));
+                
+            hit = Physics2D.Raycast(transform.position, myPositionToPlayerPositionDirection, _enemyInfoData.viewingRadius, layerMask2);
+            if (hit != null && hit.transform.CompareTag("Player"))
+            {
+                Debug.DrawRay(transform.position, myPositionToPlayerPositionDirection * _enemyInfoData.viewingRadius);
+                if (Vector2.Distance(collider.transform.position, transform.position) < _enemyInfoData.maxAttackRangeRadius)
+                {
+                    if (_enemyAttack.isAttacking == false)
+                    {
+                        _enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
+                    }
+                }
+                else
+                {
+                    _enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
+                }
+            }
         }
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, _enemyInfoData.maxAttackRangeRadius);
+        
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _enemyInfoData.viewingRadius);
     }
 }

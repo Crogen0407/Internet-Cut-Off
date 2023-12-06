@@ -6,17 +6,20 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public bool isAttacking;
+    [SerializeField] private GameObject _bullet;
     
-    public void Attack(float attackDamage, float attackDelay)
+    public void Attack(float attackDamage, float attackDelay, Vector2 attackDirection)
     {
-        StartCoroutine(AttackCoroutine(attackDamage, attackDelay));
+        StartCoroutine(AttackCoroutine(attackDamage, attackDelay, attackDirection));
     }
 
-    private IEnumerator AttackCoroutine(float attackDamage, float attackDelay)
+    private IEnumerator AttackCoroutine(float attackDamage, float attackDelay, Vector2 attackDirection)
     {
         isAttacking = true;
         yield return new WaitForSeconds(attackDelay);
-        Debug.Log("공격");
+        Debug.Log("dfdf");
+        GameObject bullet = Instantiate(_bullet, transform.position, Quaternion.identity);
+        bullet.GetComponent<EnemyBullet>().fireDirection = attackDirection;
         isAttacking = false;
     }
 }
