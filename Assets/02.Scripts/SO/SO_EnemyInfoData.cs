@@ -8,5 +8,5 @@ public class SO_EnemyInfoData : ScriptableObject
     public float attackDamage = 1;
     public float attackDelay = 1;
     public float maxAttackRangeRadius = 0.5f;
-    public float viewingRadius = 2;
+    public float viewingRadius = 5;
 }

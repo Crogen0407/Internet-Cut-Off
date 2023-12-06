@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, _enemyInfoData.maxAttackRangeRadius, _layerMask);
-        if (colliders.Length > 0 && _enemyAttack.isAttacking == false)
+        Collider2D colliders = Physics2D.OverlapCircle(transform.position, _enemyInfoData.maxAttackRangeRadius, _layerMask);
+        if (colliders != null && _enemyAttack.isAttacking == false)
         {
             _enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay);
         }
@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         if (_enemyAttack.isAttacking == false)
         {
             _enemyMovement.Move(_enemyInfoData.moveSpeed);
