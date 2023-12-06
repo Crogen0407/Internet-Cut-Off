@@ -74,4 +74,13 @@ public class Player : MonoBehaviour
             //DDang = true;
         }
     }
+
+    void KnifeAttack()
+    {
+
+    }
+    void ThrowAttack()
+    {
+
+    }
 }
