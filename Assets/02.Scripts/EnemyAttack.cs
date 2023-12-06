@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isAttacking;
+    
+    public void Attack(float attackDamage, float attackDelay)
     {
-        
+        StartCoroutine(AttackCoroutine(attackDamage, attackDelay));
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator AttackCoroutine(float attackDamage, float attackDelay)
     {
-        
+        isAttacking = true;
+        yield return new WaitForSeconds(attackDelay);
+        Debug.Log("공격");
+        isAttacking = false;
     }
 }

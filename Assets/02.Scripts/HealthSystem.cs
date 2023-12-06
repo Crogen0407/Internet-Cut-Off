@@ -3,20 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class HealthSystem
+public class HealthSystem : MonoBehaviour
 {
-    private int _hp;
+    [SerializeField] private int _hp = 3;
     public Action Dead;
     public Action Damaged;
 
-    public HealthSystem(int hp, Action damagedAction, Action deadAction)
-    {
-        _hp = hp;
-        Dead += deadAction;
-        Damaged += damagedAction;
-    }
-    
     ~HealthSystem()
     {
         try

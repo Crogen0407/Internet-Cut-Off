@@ -4,8 +4,9 @@
 public class SO_EnemyInfoData : ScriptableObject
 {
     public EnemyType enemyType = EnemyType.Yellow;
-    public HealthSystem healthSystem;
     public float moveSpeed = 1;
     public float attackDamage = 1;
+    public float attackDelay = 1;
     public float maxAttackRangeRadius = 0.5f;
+    public float viewingRadius = 2;
 }
