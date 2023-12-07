@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/CinemachineController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/CinemachineController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene/EndingScene_Internet.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene/EndingScene_Internet.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene/EndingScene_ReadWorld.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene/EndingScene_ReadWorld.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.Settings/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.Settings/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +115,7 @@
       <workItem from="1701869510187" duration="8586000" />
       <workItem from="1701903810341" duration="3090000" />
       <workItem from="1701926936022" duration="3703000" />
-      <workItem from="1701954871225" duration="6615000" />
+      <workItem from="1701954871225" duration="10520000" />
     </task>
     <servers />
   </component>

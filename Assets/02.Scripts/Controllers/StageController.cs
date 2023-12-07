@@ -7,11 +7,23 @@ public class StageController : MonoSingleton<StageController>
 {
     [SerializeField] private int _currentStage;
     [SerializeField] private GameObject _currentStageGameObject;
+    [SerializeField] private GameObject _realWorldStage;
     [SerializeField] private List<StageData> stage;
-
+    private bool _onRealWorld;
+    
+    public bool OnRealWorld
+    {
+        get => _onRealWorld;
+        set
+        {
+            _onRealWorld = value;
+            _realWorldStage.SetActive(_onRealWorld);
+            _currentStageGameObject.SetActive(!_onRealWorld);
+        }
+    }
+    
     private void Awake()
     {
-        
     }
 
     public int CurrentStage
@@ -19,25 +31,37 @@ public class StageController : MonoSingleton<StageController>
         get => _currentStage;
         set
         {
-            if (_currentStage < value)
+            if (stage[_currentStage].isChangeToRealWorld == true)
+            {
+                Destroy(_currentStageGameObject);
+                OnRealWorld = true;
+            }
+            else if (_currentStage < value)
             {
                 Destroy(_currentStageGameObject);
                 _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+                SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
+                int index = 0;
+                foreach (var item in switchTriggers)
+                {
+                    stage[_currentStage].switchTriggers.Add(item);
+                    index++;
+                }
             }
             _currentStage = value;
         }
     }
-
-    public List<StageData> Stage
+    
+    [ContextMenu("GoToInternetWorld")]
+    private void GoToInternetWorld()
     {
-        get => stage;
-        set
+        if (_onRealWorld == true)
         {
-            stage = value;
-            
+            _currentStageGameObject = Instantiate(stage[_currentStage].stagePrefab, Vector3.zero, Quaternion.identity);
+            OnRealWorld = false;
         }
     }
-
+    
     public void CheckSwitch()
     {
         foreach (SwitchTrigger switchTrigger in stage[_currentStage].switchTriggers)
@@ -53,6 +77,14 @@ public class StageController : MonoSingleton<StageController>
     public void StartFirstStage()
     {
         _currentStageGameObject = Instantiate(stage[0].stagePrefab, Vector3.zero, Quaternion.identity);
+        SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
+        int index = 0;
+        foreach (var item in switchTriggers)
+        {
+            stage[_currentStage].switchTriggers.Add(item);
+            index++;
+        }
+        OnRealWorld = false;
     }
     
     /// <summary>
