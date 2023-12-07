@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/StageInformation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/StageInformation.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyAttack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyAttack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/EnemyType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/HealthSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/HealthSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/SO/SO_ColliderUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/SO/SO_ColliderUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04.Textures/ScreenColor.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04.Textures/ScreenColor.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.SO/YellowEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.SO/YellowEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "StateManagement",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,7 +105,7 @@
       <workItem from="1701789794029" duration="8776000" />
       <workItem from="1701869510187" duration="8586000" />
       <workItem from="1701903810341" duration="3090000" />
-      <workItem from="1701926936022" duration="1698000" />
+      <workItem from="1701926936022" duration="3584000" />
     </task>
     <servers />
   </component>
