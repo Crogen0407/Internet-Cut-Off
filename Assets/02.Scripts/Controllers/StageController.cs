@@ -5,6 +5,7 @@ using UnityEngine;
 public class StageController : MonoSingleton<StageController>
 {
     [SerializeField] private int _currentStage;
+    [SerializeField] private GameObject _currentStageGameObject;
     [SerializeField] private List<StageData> stage;
     
     public int CurrentStage
@@ -12,6 +13,11 @@ public class StageController : MonoSingleton<StageController>
         get => _currentStage;
         set
         {
+            if (_currentStage < value)
+            {
+                Destroy(_currentStageGameObject);
+                _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+            }
             _currentStage = value;
         }
     }
@@ -22,19 +28,25 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             stage = value;
-            if (stage[_currentStage].yellowEnemyCount <= 0)
+            
+        }
+    }
+
+    public void CheckSwitch()
+    {
+        foreach (SwitchTrigger switchTrigger in stage[_currentStage].switchTriggers)
+        {
+            if (switchTrigger.switchOperation == false)
             {
-                NextStage();
-            }
-            else if (stage[_currentStage].blueEnemyCount <= 0)
-            {
-                
-            }
-            else if (stage[_currentStage].redEnemyCount <= 0)
-            {
-                
+                return;
             }
         }
+        NextStage();
+    }
+    
+    public void StartFirstStage()
+    {
+        _currentStageGameObject = Instantiate(stage[0].stagePrefab, Vector3.zero, Quaternion.identity);
     }
     
     /// <summary>

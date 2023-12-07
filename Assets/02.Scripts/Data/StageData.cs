@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
 public class StageData
 {
     public GameObject stagePrefab;
-    [Space] [Header("EnemyCount")] 
-    public int yellowEnemyCount;
-    public int blueEnemyCount;
-    public int redEnemyCount;
-
+    [Space] [Header("SwitchTrigger")] 
+    public List<SwitchTrigger> switchTriggers;
 }
