@@ -14,11 +14,11 @@ public class SO_ColliderUpdate : MonoBehaviour
 
     [SerializeField] private GameObject[] RealWorldObj = new GameObject[10];
     [SerializeField] private GameObject[] InternetWorldObj = new GameObject[10];
-    /* 0 : ╨╝ & ╧ы╢з
-     * 1 : ╧╝
-     * 2 : ╧ы╢з
-     * 3 : ╣ч╧Х╟Ф
-     * 4 : е╛╦╝╬Н ю╖д║
+    /* 0 : К╡╫ & К╟■К▀╔
+     * 1 : К╛╦
+     * 2 : К╟■К▀╔
+     * 3 : К▓╥К╟╟Й╡╫
+     * 4 : М│╢К╕╛Л√╢ Л°└Л╧≤
      */
 
     private int Stage = 1;
@@ -31,7 +31,7 @@ public class SO_ColliderUpdate : MonoBehaviour
         WorldSet();
     }
 
-    //ев╫╨ф╝©К ╬Ь╬ы ©╧а╓
+    //М┘▄Л┼╓М┼╦Л ╘ Л≈├Л∙╗ Л≤┬Л═∙
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
