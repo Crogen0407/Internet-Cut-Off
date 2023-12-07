@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,12 @@ public class StageController : MonoSingleton<StageController>
     [SerializeField] private int _currentStage;
     [SerializeField] private GameObject _currentStageGameObject;
     [SerializeField] private List<StageData> stage;
-    
+
+    private void Awake()
+    {
+        
+    }
+
     public int CurrentStage
     {
         get => _currentStage;
