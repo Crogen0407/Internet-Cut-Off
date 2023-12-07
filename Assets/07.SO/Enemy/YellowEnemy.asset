@@ -17,4 +17,4 @@ MonoBehaviour:
   attackDamage: 1
   attackDelay: 1
   maxAttackRangeRadius: 5.33
-  viewingRadius: 8
+  viewingRadius: 10
