@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Player_SangHoJakYong : MonoBehaviour
 {
+    [SerializeField] private KeyCode interactionKeyCode;
     GameObject PlayerMain;
-    GameObject ButtonObj_Copy;//»óÈ£ÀÛ¿ëÅ° Ä«ÇÇ¿ëµµÀÓ. ¤¾¤¾¤¾¤¾¤¾¤¾¤¾ ³ª ÀßÇßÂ¡?? ¤¾¤¾¤¾^^
+    GameObject ButtonObj_Copy;//ìƒí˜¸ì‘ìš©í‚¤ ì¹´í”¼ìš©ë„ì„. ã…ã…ã…ã…ã…ã…ã… ë‚˜ ì˜í–ˆì§•?? ã…ã…ã…^^
     Rigidbody2D ri;
     sbyte Face;// 1 R, -1 L
 
@@ -28,16 +29,21 @@ public class Player_SangHoJakYong : MonoBehaviour
 
     void SangHoJakYong()
     {
-        //¿øº» ÇÁ¸®Æé ÆÄ±«°¡ ¾Æ´Ñ, º¹»çµÈ ¿ÀºêÁ§Æ® ÆÄ±«
+        //ì›ë³¸ í”„ë¦¬í© íŒŒê´´ê°€ ì•„ë‹Œ, ë³µì‚¬ëœ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
         Destroy(ButtonObj_Copy);
-        RaycastHit2D RaySi = Physics2D.Raycast(ri.position, Vector3.right * Face, 1, LayerMask.GetMask("Water"));
+        RaycastHit2D RaySi = Physics2D.Raycast(ri.position, Vector3.right * Face, 1, LayerMask.GetMask("Interable"));
         Debug.DrawRay(ri.position, Vector3.right * Face, new Color(0, 1, 0));
         if (RaySi.collider != null)
         {
-
+            if (Input.GetKeyDown(interactionKeyCode))
+            {
+                Debug.Log("ì¸ì‹");
+                RaySi.transform.GetComponent<Interaction>().action?.Invoke();
+            }
+            
             if (RaySi.distance < 1.0f)
             {
-                //¿øº»ÇÁ¸®Æé ÆÄ±« ¹æÁö¸¦ À§ÇÑ º¹»ç
+                //ì›ë³¸í”„ë¦¬í© íŒŒê´´ ë°©ì§€ë¥¼ ìœ„í•œ ë³µì‚¬
                 ButtonObj_Copy = Instantiate(ButtonObj, ButtonPos.transform.position, ButtonPos.transform.rotation);
             }
         }
