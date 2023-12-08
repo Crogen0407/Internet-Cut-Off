@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Player/ButtonObj.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Player/ButtonObj.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Player/Player_SangHoJakYong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Player/Player_SangHoJakYong.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/SwitchTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/SwitchTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestStage1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestStage1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestStage2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestStage2.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "StateManagement",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
