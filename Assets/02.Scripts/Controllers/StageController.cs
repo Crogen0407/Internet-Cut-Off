@@ -7,9 +7,16 @@ public class StageController : MonoSingleton<StageController>
 {
     [SerializeField] private int _currentStage;
     [SerializeField] private GameObject _currentStageGameObject;
-    [SerializeField] private GameObject _realWorldStage;
+    private GameObject _realWorldStage;
     [SerializeField] private List<StageData> stage;
     private bool _onRealWorld;
+    
+    //Managemets
+    private GameManager _gameManager;
+    
+    //Controllers
+    private CinemachineController _cinemachineController;
+    private ScreenEffectControllder _screenEffectControllder;
     
     public bool OnRealWorld
     {
@@ -17,6 +24,7 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             _onRealWorld = value;
+            _screenEffectControllder.SetScreenEffect("_BlackAndWhite", _onRealWorld);
             _realWorldStage.SetActive(_onRealWorld);
             _currentStageGameObject.SetActive(!_onRealWorld);
         }
@@ -24,6 +32,14 @@ public class StageController : MonoSingleton<StageController>
     
     private void Awake()
     {
+        _realWorldStage = GameObject.Find("RealWorld");
+    }
+
+    private void Start()
+    {
+        _gameManager = GameManager.Instance;
+        _cinemachineController = _gameManager.cinemachineController;
+        _screenEffectControllder = _gameManager.screenEffectControllder;
     }
 
     public int CurrentStage
@@ -40,11 +56,13 @@ public class StageController : MonoSingleton<StageController>
             {
                 Destroy(_currentStageGameObject);
                 _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+                PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
+                _cinemachineController.SetCinemachineConfinerBoundingShape(boundShape);
                 SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
                 int index = 0;
                 foreach (var item in switchTriggers)
                 {
-                    stage[_currentStage].switchTriggers.Add(item);
+                    stage[value].switchTriggers.Add(item);
                     index++;
                 }
             }
@@ -76,6 +94,7 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
+        _screenEffectControllder.SetScreenEffect("_BlackAndWhite", false);
         _currentStageGameObject = Instantiate(stage[0].stagePrefab, Vector3.zero, Quaternion.identity);
         SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
         int index = 0;
