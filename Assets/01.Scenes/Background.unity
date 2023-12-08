@@ -2149,6 +2149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchOperation: 0
+  switchCompleteSprite: {fileID: 0}
 --- !u!114 &1757734727
 MonoBehaviour:
   m_ObjectHideFlags: 0
