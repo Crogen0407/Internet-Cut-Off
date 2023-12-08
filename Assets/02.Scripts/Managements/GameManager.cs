@@ -1,25 +1,27 @@
 ﻿using System;
+using Cinemachine;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    private StageController _stageController;
-    
+    public StageController stageController;
+    private CinemachineController cinemachineController;
     private void Awake()
     {
-        _stageController = FindObjectOfType<StageController>();
+        stageController = FindObjectOfType<StageController>();
+        cinemachineController = FindObjectOfType<CinemachineController>();
     }
 
     private void Start()
     {
-        _stageController.StartFirstStage();
+        stageController.StartFirstStage();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            _stageController.CheckSwitch();
+            stageController.CheckSwitch();
         }
     }
 }
