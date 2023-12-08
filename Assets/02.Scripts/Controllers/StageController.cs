@@ -42,6 +42,28 @@ public class StageController : MonoSingleton<StageController>
         _screenEffectControllder = _gameManager.screenEffectControllder;
     }
 
+    private void ResetStage(int value)
+    {
+        if (_currentStageGameObject != null)
+        {
+            Destroy(_currentStageGameObject);
+        }
+        _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+        PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
+        if (boundShape.isTrigger == false)
+        {
+            boundShape.isTrigger = true;
+        }
+        _cinemachineController.SetCinemachineConfinerBoundingShape(boundShape);
+        SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
+        int index = 0;
+        foreach (var item in switchTriggers)
+        {
+            stage[value].switchTriggers.Add(item);
+            index++;
+        }
+    }
+    
     public int CurrentStage
     {
         get => _currentStage;
@@ -54,17 +76,11 @@ public class StageController : MonoSingleton<StageController>
             }
             else if (_currentStage < value)
             {
-                Destroy(_currentStageGameObject);
-                _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
-                PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
-                _cinemachineController.SetCinemachineConfinerBoundingShape(boundShape);
-                SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
-                int index = 0;
-                foreach (var item in switchTriggers)
+                _screenEffectControllder.BrightnessFade(0, 1, () =>
                 {
-                    stage[value].switchTriggers.Add(item);
-                    index++;
-                }
+                    ResetStage(value);
+                    _screenEffectControllder.BrightnessFade(3, 1);
+                });
             }
             _currentStage = value;
         }
@@ -94,15 +110,8 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
-        _screenEffectControllder.SetScreenEffect("_BlackAndWhite", false);
-        _currentStageGameObject = Instantiate(stage[0].stagePrefab, Vector3.zero, Quaternion.identity);
-        SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
-        int index = 0;
-        foreach (var item in switchTriggers)
-        {
-            stage[_currentStage].switchTriggers.Add(item);
-            index++;
-        }
+        ResetStage(0);
+        _screenEffectControllder.BrightnessFade(3, 1);
         OnRealWorld = false;
     }
     
