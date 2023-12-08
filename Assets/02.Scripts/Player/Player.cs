@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
     [SerializeField] float dashSpeed;
-    bool DDang;
+    bool DDang= false;
     bool isDasing;
     public sbyte Face =1; // 1 R, -1 L
 
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     private void JumpGamji()
     {
         //Debug.DrawRay(ri.position, Vector3.down, new Color(0,1,0));
-        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("platform"));
+        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("UI"));
         if (ri.velocity.y < 0)
         {
             if (RaySir.collider != null)
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
                 if (RaySir.distance < 1.0f)
                 {
                     animer.SetBool("Jump", false);
-                    //DDang = false;
+                    DDang = false;
                 }
             }
         }
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
             Sound_Jump();
             animer.SetBool("Jump", true);
             ri.AddForce(Vector3.up * JumpScale, ForceMode2D.Impulse);
-            //DDang = true;
+            DDang = true;
         }
     }
     #endregion
