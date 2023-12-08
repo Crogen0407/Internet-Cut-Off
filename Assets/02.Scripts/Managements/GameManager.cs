@@ -5,11 +5,14 @@ using UnityEngine;
 public class GameManager : MonoSingleton<GameManager>
 {
     public StageController stageController;
-    private CinemachineController cinemachineController;
+    public CinemachineController cinemachineController;
+    public ScreenEffectControllder screenEffectControllder;
+    
     private void Awake()
     {
         stageController = FindObjectOfType<StageController>();
         cinemachineController = FindObjectOfType<CinemachineController>();
+        screenEffectControllder = FindObjectOfType<ScreenEffectControllder>();
     }
 
     private void Start()
