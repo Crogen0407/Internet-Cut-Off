@@ -42,4 +42,9 @@ public class CutSceneController : MonoBehaviour
     {
         _player.transform.position = transformPos.position;
     }
+
+    public void SetCinemachinePriority(float latePriority)
+    {
+        
+    }
 }
