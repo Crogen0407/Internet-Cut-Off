@@ -20,11 +20,26 @@ public class CutSceneController : MonoBehaviour
 
     public void Fade(string type)
     {
-        _screenEffectController.Fade(type, 2, 2);
+        _screenEffectController.Fade(type, 0, 2);
     }
 
+    public void BrightnessFade(float duration)
+    {
+        _screenEffectController.Fade("_Brightness", 0, duration);
+    }
+    
     public void SetPlayerFace(float direction)
     {
         _player.Face = (sbyte)direction;
+    }
+    
+    public void PlayerMove(float direction)
+    {
+        Debug.Log("PlayerMove");
+    }
+    
+    public void SetPlayerPosition(Transform transformPos)
+    {
+        _player.transform.position = transformPos.position;
     }
 }
