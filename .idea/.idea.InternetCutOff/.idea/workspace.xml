@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/ScreenEffectControllder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/ScreenEffectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/ScreenEffectControllder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/ScreenEffectController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneControllder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneControllder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Managements/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Managements/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/ScreenEffect.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/ScreenEffect.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/ScreenEffectQuad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/ScreenEffectQuad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage5.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +35,10 @@
     <setting file="file://$PROJECT_DIR$/../../../_Portfolioes/GK-99/GK-99/Assets/00.Scripts/Enemy/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/Managements/TimeLineManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/Managements/TimelineManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/Player/Player_SangHoJakYong.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02.Scripts/SwitchTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Runtime/RendererFeatures/FullScreenPassRendererFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Runtime/UniversalRenderPipelineGlobalSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Data/Implementation/GraphObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -124,7 +124,7 @@
       <workItem from="1701926936022" duration="3703000" />
       <workItem from="1701954871225" duration="12980000" />
       <workItem from="1701997729013" duration="7535000" />
-      <workItem from="1702088191062" duration="5156000" />
+      <workItem from="1702088191062" duration="12822000" />
     </task>
     <servers />
   </component>

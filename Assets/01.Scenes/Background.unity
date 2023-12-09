@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1271601877}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -309,7 +309,7 @@ Transform:
   m_GameObject: {fileID: 248160270}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.122778}
+  m_LocalPosition: {x: 4.49, y: 11.73, z: 10.122778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -431,15 +431,18 @@ MonoBehaviour:
   _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   stage:
-  - stagePrefab: {fileID: 4727556507489803796, guid: 9de0916e54f7a734c989136f8b02f696, type: 3}
+  - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
-  - stagePrefab: {fileID: 4727556507489803796, guid: 1afb55637f9204546b90893202d7efe3, type: 3}
+    playerSpawnPosition: {x: 0, y: 0}
+  - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
-  - stagePrefab: {fileID: 4727556507489803796, guid: 05f9c13cd8f9caa4e8c295e0b71b516a, type: 3}
+    playerSpawnPosition: {x: 0, y: 0}
+  - stagePrefab: {fileID: 1918522777446496491, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
+    playerSpawnPosition: {x: 0, y: 0}
 --- !u!4 &345584398
 Transform:
   m_ObjectHideFlags: 0
@@ -734,7 +737,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.84, y: 0, z: 0}
+  m_LocalPosition: {x: 6.33, y: 11.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1330,7 +1333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageController: {fileID: 0}
   cinemachineController: {fileID: 0}
-  screenEffectControllder: {fileID: 0}
+  screenEffectController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1257011149
 Transform:
   m_ObjectHideFlags: 0
@@ -1401,8 +1405,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6875, y: 1.9375}
+  m_Offset: {x: 0.051656246, y: -0.017548561}
+  m_Size: {x: 0.77284527, y: 1.7620144}
   m_Direction: 0
 --- !u!95 &1271601871
 Animator:
@@ -1551,10 +1555,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHP: 43
   PlayerSpeed: 10
-  JumpScale: 17
+  JumpScale: 20
   dashTime: 0.1
   dashSpeed: 30
   Face: 1
+  developmentVelocity: {x: 0, y: 0, z: 0}
   S_Jump: {fileID: 3032737540973288778, guid: 57478c2fff6467f4eb972302873383ec, type: 3}
   S_Dash: {fileID: 2135289093605939050, guid: 2295886cc215b9e4882100ae7588462c, type: 3}
 --- !u!4 &1271601877
@@ -1566,7 +1571,7 @@ Transform:
   m_GameObject: {fileID: 1271601869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -1.73, z: 0}
+  m_LocalPosition: {x: 4.49, y: 9.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1976,6 +1981,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1633436504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633436505}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633436505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633436504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647117728
 GameObject:
   m_ObjectHideFlags: 3
@@ -2023,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 3, z: -10}
+  m_FollowOffset: {x: 0, y: 2, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2115,7 +2151,7 @@ GameObject:
   - component: {fileID: 1757734726}
   - component: {fileID: 1757734727}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: SwitchTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2187,7 +2223,7 @@ Transform:
   m_GameObject: {fileID: 1793999517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.894, y: -0.013000011, z: 0.004747898}
+  m_LocalPosition: {x: 1.111, y: -0.013000011, z: 0.004747898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2391,3 +2427,4 @@ SceneRoots:
   - {fileID: 891741488}
   - {fileID: 320912974}
   - {fileID: 1890619476}
+  - {fileID: 1633436505}

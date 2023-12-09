@@ -49,6 +49,7 @@ public class StageController : MonoSingleton<StageController>
             Destroy(_currentStageGameObject);
         }
         _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+        _gameManager.player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
         PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
         if (boundShape.isTrigger == false)
         {
