@@ -35,7 +35,7 @@ public class CutSceneController : MonoBehaviour
     
     public void PlayerMove(float direction)
     {
-        Debug.Log("PlayerMove");
+        _player.developmentVelocity = new Vector3(direction, 0);
     }
     
     public void SetPlayerPosition(Transform transformPos)
