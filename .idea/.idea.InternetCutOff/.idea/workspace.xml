@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_PlayerChoice.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_PlayerChoice.unity" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.Settings/Internet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.Settings/Internet.asset" afterDir="false" />
     </list>
+=======
+    <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +48,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -56,6 +61,20 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
@@ -118,7 +137,7 @@
       <workItem from="1701926936022" duration="3703000" />
       <workItem from="1701954871225" duration="12980000" />
       <workItem from="1701997729013" duration="7535000" />
-      <workItem from="1702088191062" duration="12822000" />
+      <workItem from="1702088191062" duration="13201000" />
     </task>
     <servers />
   </component>
