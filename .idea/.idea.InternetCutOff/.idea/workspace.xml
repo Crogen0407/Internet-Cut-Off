@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CinemachineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CinemachineController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CinemachineController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CinemachineController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/BlindController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/BlindController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CutSceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/CutSceneController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CutSceneController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_PlayerChoice.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_PlayerChoice.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CinemachineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CinemachineController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CutSceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/CutSceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Managements/TimelineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Managements/TimelineManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/ScreenEffect.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/ScreenEffect.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Player/Player.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

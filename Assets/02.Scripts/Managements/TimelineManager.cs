@@ -8,17 +8,21 @@ public class TimelineManager : MonoSingleton<TimelineManager>
 {
     public List<TimeLineFrame> timeline;
     public int TimeLineIndexer { get; private set; }
-
+    
+    
+    
     //Controllers
     [HideInInspector] public ScreenEffectController screenEffectController;
     [HideInInspector] public CutSceneController cutSceneController;
     [HideInInspector] public Player player;
+    [HideInInspector] public Transform canvasTransform;
 
     private void Awake()
     {
         screenEffectController = FindObjectOfType<ScreenEffectController>();
         cutSceneController = FindObjectOfType<CutSceneController>();
         player = FindObjectOfType<Player>();
+        canvasTransform = FindObjectOfType<Canvas>().transform;
     }
 
     private void Start()

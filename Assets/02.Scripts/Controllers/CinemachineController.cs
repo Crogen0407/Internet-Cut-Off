@@ -17,32 +17,4 @@ public class CinemachineController : MonoBehaviour
     {
         _cinemachineConfiner.m_BoundingShape2D = BoundingShape;
     }
-
-    public void SetCinemachinePriority(float waitTime, float duration, float latePriority)
-    {
-        StartCoroutine(SetCinemachinePriorityCoroutine(waitTime, duration, latePriority));
-    }
-
-    private IEnumerator SetCinemachinePriorityCoroutine(float waitTime, float duration, float latePriority)
-    {
-        yield return new WaitForSecondsRealtime(waitTime);
-        float currentPriority = _virtualCamera.Priority;
-        float currentTime = 0;
-        float percentTime = 0;
-        bool fadeMode = currentPriority > latePriority ? true : false;
-        while (percentTime < 1)
-        {
-            currentTime += Time.deltaTime;
-            percentTime = currentTime / duration;
-            if (fadeMode == true)
-            {
-                _virtualCamera.Priority = (int)percentTime;
-            }
-            else
-            {
-                _virtualCamera.Priority = (int)(currentPriority - percentTime);
-            }
-            yield return null;
-        }
-    }
 }
