@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     bool isDasing;
     public sbyte Face =1; // 1 R, -1 L
 
+    public Vector3 developmentVelocity;
+
     [Header("플레이어 기본사운드")]
     [SerializeField] GameObject S_Jump;
     [SerializeField] GameObject S_Dash;
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
         { 
             Vector3 vel = new Vector3(1,0,0) * Input.GetAxisRaw("Horizontal") * PlayerSpeed * 1;
             vel.y = ri.velocity.y;
+            vel += developmentVelocity;
             ri.velocity = vel; 
         }
         //Face
@@ -108,7 +111,7 @@ public class Player : MonoBehaviour
             isDasing = true;
             animer.SetBool("Dash", true);
             ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
-            Invoke("EndDash", dashTime+0.5f);
+            Invoke("EndDash", dashTime+0.2f);
         }
     }
     void EndDash()
