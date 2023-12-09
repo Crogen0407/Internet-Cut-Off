@@ -28,13 +28,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        animer.SetFloat("Run", Mathf.Abs(ri.velocity.x));
         Move();
         JumpGamji();
         Jump();
         Dash();
+        SetFace();
     }
 
-    #region 움직임
+#region 움직임
     private void Move()
     {
         //이동
@@ -44,25 +46,26 @@ public class Player : MonoBehaviour
             vel.y = ri.velocity.y;
             ri.velocity = vel; 
         }
-        //방향전환과 전환애니메이션
+        //Face
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
-            transform.localScale = new Vector3(-1, 1, 1);//방향전환
             Face = -1;
         }
         else if (Input.GetAxisRaw("Horizontal") == 1)
         {
-            transform.localScale = new Vector3(1, 1, 1);//방향원래
             Face = 1;
         }
-        if (Input.GetAxisRaw("Horizontal") == 0)//애니메이숀
+    }
+
+    void SetFace()
+    {
+        if(Face == 1)
         {
-            animer.SetBool("Run", false);
+            transform.localScale = new Vector3(1, 1, 1);//방향전환
         }
-        else
+        else if (Face == -1)
         {
-            AnimationAllOff();
-            animer.SetBool("Run", true);
+            transform.localScale = new Vector3(-1, 1, 1);//방향전환
         }
     }
     #endregion
@@ -71,7 +74,7 @@ public class Player : MonoBehaviour
     private void JumpGamji()
     {
         //Debug.DrawRay(ri.position, Vector3.down, new Color(0,1,0));
-        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("UI"));
+        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
         if (ri.velocity.y < 0)
         {
             if (RaySir.collider != null)
@@ -105,7 +108,7 @@ public class Player : MonoBehaviour
             isDasing = true;
             animer.SetBool("Dash", true);
             ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
-            Invoke("EndDash", dashTime);
+            Invoke("EndDash", dashTime+0.5f);
         }
     }
     void EndDash()

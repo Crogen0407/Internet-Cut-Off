@@ -50,12 +50,12 @@ public class Player_Attack : MonoBehaviour
             var copy = Instantiate(SwingArea, SwingPos.transform.position, SwingPos.transform.rotation);
             //원본 프리펩 파괴가 아닌, 복사된 오브젝트 파괴
             Destroy(copy, 0.5f);
-            Invoke("AfterKnifeAttack", 0.5f);
+            Invoke("AfterKnifeAttack", 0.25f);
         }
     }
     void AfterKnifeAttack()
     {
-        animer.SetBool("Attack", true);
+        animer.SetBool("Attack", false);
         canSwing = true;
     }
 
@@ -69,8 +69,13 @@ public class Player_Attack : MonoBehaviour
             canThrow = false;
             print("throw");
             Instantiate(Knife, KnifePos.transform.position, KnifePos.transform.rotation);
+            Invoke("AnimaionOff_ThrowAttack", 0.25f);
             Invoke("AfterThrowAttack", 1f);
         }
+    }
+    void AnimaionOff_ThrowAttack()
+    {
+        animer.SetBool("Attack", false);
     }
     void AfterThrowAttack()
     {
