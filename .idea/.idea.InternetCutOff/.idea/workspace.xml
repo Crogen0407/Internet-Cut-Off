@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Background.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Controllers/StageController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Data/StageData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Managements/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Managements/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Stages/Stage5.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +124,7 @@
       <workItem from="1701926936022" duration="3703000" />
       <workItem from="1701954871225" duration="12980000" />
       <workItem from="1701997729013" duration="7535000" />
-      <workItem from="1702088191062" duration="11434000" />
+      <workItem from="1702088191062" duration="12822000" />
     </task>
     <servers />
   </component>
