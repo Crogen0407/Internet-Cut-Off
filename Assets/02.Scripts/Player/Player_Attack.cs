@@ -38,7 +38,7 @@ public class Player_Attack : MonoBehaviour
         }
     }
 
-    void KnifeAttack()
+    public void KnifeAttack()
     {
         if(canSwing == true)
         {

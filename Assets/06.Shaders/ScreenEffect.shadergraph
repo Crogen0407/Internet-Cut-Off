@@ -14,12 +14,6 @@
         },
         {
             "m_Id": "479698c6bf9947ceb7ece0e3d2fe4611"
-        },
-        {
-            "m_Id": "a50edd422512400fb30fc873011df709"
-        },
-        {
-            "m_Id": "8d244e46588f434292afc6d2c655cf50"
         }
     ],
     "m_Keywords": [],
@@ -628,12 +622,6 @@
         },
         {
             "m_Id": "479698c6bf9947ceb7ece0e3d2fe4611"
-        },
-        {
-            "m_Id": "a50edd422512400fb30fc873011df709"
-        },
-        {
-            "m_Id": "8d244e46588f434292afc6d2c655cf50"
         }
     ]
 }
@@ -1384,34 +1372,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "8d244e46588f434292afc6d2c655cf50",
-    "m_Guid": {
-        "m_GuidSerialized": "73f9e71f-efd7-47f9-8057-7d52f5e44d3f"
-    },
-    "m_Name": "LatterboxCurrentSize",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "LatterboxCurrentSize",
-    "m_DefaultReferenceName": "_LatterboxCurrentSize",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 1.0,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "903f105d9a684d09b55de58d5eeb3616",
@@ -1516,34 +1476,6 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
-    }
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "a50edd422512400fb30fc873011df709",
-    "m_Guid": {
-        "m_GuidSerialized": "3741a45f-aae2-422e-a346-57484ae16e06"
-    },
-    "m_Name": "LetterboxMaxSize",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "LetterboxMaxSize",
-    "m_DefaultReferenceName": "_LetterboxMaxSize",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.30000001192092898,
-    "m_FloatType": 0,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
     }
 }
 
