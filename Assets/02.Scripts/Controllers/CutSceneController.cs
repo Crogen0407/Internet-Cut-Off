@@ -79,4 +79,9 @@ public class CutSceneController : MonoBehaviour
     {
         _player.transform.position = transformPos.position;
     }
+
+    public void SetBlackAndWhite(bool parameter)
+    {
+        _screenEffectController.SetScreenEffect("_BlackAndWhite", parameter);
+    }
 }
