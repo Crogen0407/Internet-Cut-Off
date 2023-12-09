@@ -431,7 +431,7 @@ MonoBehaviour:
   _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   stage:
-  - stagePrefab: {fileID: 4727556507489803796, guid: 9de0916e54f7a734c989136f8b02f696, type: 3}
+  - stagePrefab: {fileID: 0}
     switchTriggers: []
     isChangeToRealWorld: 0
   - stagePrefab: {fileID: 4727556507489803796, guid: 1afb55637f9204546b90893202d7efe3, type: 3}
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 1757734726}
   - component: {fileID: 1757734727}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: SwitchTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
