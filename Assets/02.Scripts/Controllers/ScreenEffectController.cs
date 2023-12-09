@@ -3,14 +3,14 @@ using System.Collections;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class ScreenEffectControllder : MonoBehaviour
+public class ScreenEffectController : MonoBehaviour
 {
     [SerializeField] private Material _screenEffect;
 
     private void Awake()
     {
-        _screenEffect.SetFloat("_Brightness", 0);
-
+        SetScreenEffect("_Brightness", 0);
+        SetScreenEffect("_LatterboxCurrentSize", 0);
     }
 
     public void SetScreenEffect<T>(string type, T value) where T : struct
@@ -29,16 +29,15 @@ public class ScreenEffectControllder : MonoBehaviour
         }
     }
 
-    public void BrightnessFade(float waitTime, float duration)
+    public void Fade(string type, float waitTime, float duration)
     {
-        StartCoroutine(BrightnessFadeCoroutine(waitTime, duration));
+        StartCoroutine(FadeCoroutine(type, waitTime, duration));
     }
 
-    private IEnumerator BrightnessFadeCoroutine(float waitTime, float duration)
+    private IEnumerator FadeCoroutine(string type, float waitTime, float duration)
     {
         yield return new WaitForSecondsRealtime(waitTime);
-        float currentBrightness = _screenEffect.GetFloat("_Brightness");
-        Debug.Log(currentBrightness);
+        float currentBrightness = _screenEffect.GetFloat(type);
         float currentTime = 0;
         float percentTime = 0;
         bool fadeMode = currentBrightness < 0.5f ? true : false;
@@ -48,26 +47,25 @@ public class ScreenEffectControllder : MonoBehaviour
             percentTime = currentTime / duration;
             if (fadeMode == true)
             {
-                _screenEffect.SetFloat("_Brightness", percentTime);
+                _screenEffect.SetFloat(type, percentTime);
             }
             else
             {
-                _screenEffect.SetFloat("_Brightness", 1 - percentTime);
+                _screenEffect.SetFloat(type, 1 - percentTime);
             }
             yield return null;
         }
     }
     
-    public void BrightnessFade(float waitTime, float duration, Action lateAction)
+    public void Fade(string type, float waitTime, float duration, Action lateAction)
     {
-        StartCoroutine(BrightnessFadeCoroutine(waitTime, duration, lateAction));
+        StartCoroutine(FadeCoroutine(type, waitTime, duration, lateAction));
     }
 
-    private IEnumerator BrightnessFadeCoroutine(float waitTime, float duration, Action lateAction)
+    private IEnumerator FadeCoroutine(string type, float waitTime, float duration, Action lateAction)
     {
         yield return new WaitForSecondsRealtime(waitTime);
-        float currentBrightness = _screenEffect.GetFloat("_Brightness");
-        Debug.Log(currentBrightness);
+        float currentBrightness = _screenEffect.GetFloat(type);
         float currentTime = 0;
         float percentTime = 0;
         bool fadeMode = currentBrightness < 0.5f ? true : false;
@@ -77,11 +75,11 @@ public class ScreenEffectControllder : MonoBehaviour
             percentTime = currentTime / duration;
             if (fadeMode == true)
             {
-                _screenEffect.SetFloat("_Brightness", percentTime);
+                _screenEffect.SetFloat(type, percentTime);
             }
             else
             {
-                _screenEffect.SetFloat("_Brightness", 1 - percentTime);
+                _screenEffect.SetFloat(type, 1 - percentTime);
             }
             yield return null;
         }
