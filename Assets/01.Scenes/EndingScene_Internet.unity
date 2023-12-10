@@ -7199,7 +7199,7 @@ MonoBehaviour:
             m_StringArgument: _LatterboxCurrentSize
             m_BoolArgument: 1
           m_CallState: 2
-  - delayTime: 5
+  - delayTime: 4
     frameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -8236,11 +8236,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3664483025760654179, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3664483025760654179, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5331956918932720618, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8248,11 +8248,11 @@ PrefabInstance:
       objectReference: {fileID: 584792980}
     - target: {fileID: 6145568899687726204, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6145568899687726204, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6653808090970819712, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8342,17 +8342,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: EscapePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7595944307722952281, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7758964944804295704, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 584792980}
     - target: {fileID: 9194057742908789408, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9194057742908789408, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

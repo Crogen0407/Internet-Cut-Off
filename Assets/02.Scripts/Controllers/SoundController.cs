@@ -16,7 +16,7 @@ public class SoundController : MonoBehaviour
     private Slider _msSoundVolumeSlider;
     private Slider _sfSoundVolumeSlider;
     private Slider _bgmSoundVolumeSlider;
-    
+
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
