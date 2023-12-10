@@ -1362,6 +1362,7 @@ GameObject:
   - component: {fileID: 1271601872}
   - component: {fileID: 1271601871}
   - component: {fileID: 1271601870}
+  - component: {fileID: 1271601878}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1516,8 +1517,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b0ab704b48a7244a8c74f19d29013d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHP: 0
+  PlayerSpeed: 0
+  JumpScale: 0
+  dashTime: 0
+  dashSpeed: 0
+  Face: 1
+  developmentVelocity: {x: 0, y: 0, z: 0}
+  S_Jump: {fileID: 0}
+  S_Dash: {fileID: 0}
   Knife: {fileID: 8551089389261462237, guid: 7c52d77837808594b8561ad4c790c082, type: 3}
-  SwingArea: {fileID: 2947649262259107527, guid: c51b2f6f2b1f7d44995c98f1235f06ba, type: 3}
   KnifePos: {fileID: 1880326903}
   SwingPos: {fileID: 1793999517}
   S_Swing: {fileID: 5080052769354637992, guid: b0f64faeb5b7cbf489d9449e5b05f3f9, type: 3}
@@ -1555,6 +1564,7 @@ MonoBehaviour:
   dashTime: 0.1
   dashSpeed: 30
   Face: 1
+  developmentVelocity: {x: 0, y: 0, z: 0}
   S_Jump: {fileID: 3032737540973288778, guid: 57478c2fff6467f4eb972302873383ec, type: 3}
   S_Dash: {fileID: 2135289093605939050, guid: 2295886cc215b9e4882100ae7588462c, type: 3}
 --- !u!4 &1271601877
@@ -1575,6 +1585,19 @@ Transform:
   - {fileID: 1793999518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271601878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271601869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db9ef1739d120b4396ee674d42db07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hp: 30
 --- !u!1 &1340745462
 GameObject:
   m_ObjectHideFlags: 0

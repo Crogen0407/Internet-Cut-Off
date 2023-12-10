@@ -24,6 +24,15 @@ public class Knife : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        HealthSystem itemHealth = collision.GetComponent<HealthSystem>();
+        if (itemHealth != null && collision.CompareTag("Enemy"))
+        {
+            itemHealth.Hp -= 10;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
