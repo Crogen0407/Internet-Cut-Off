@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9042473884847787797}
   - component: {fileID: 3123600030021423083}
   m_Layer: 0
-  m_Name: cake_valley_mountains (3)
+  m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7780437400826389106}
   - component: {fileID: 7135733192855197181}
   m_Layer: 0
-  m_Name: cake_valley_cotton-candy-back (1)
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c292e60ca429aae4e8b2cb85c6d1c85f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 7521689488449539724}
   - component: {fileID: 3432025125990950617}
   m_Layer: 0
-  m_Name: cake_valley_anthill-cake-back-2
+  m_Name: BackObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2543,7 +2543,7 @@ GameObject:
   - component: {fileID: 7793266805948381274}
   - component: {fileID: 1663908369225166079}
   m_Layer: 0
-  m_Name: cake_valley_cotton-candy-back (2)
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2606,7 +2606,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c292e60ca429aae4e8b2cb85c6d1c85f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2627,7 +2627,7 @@ GameObject:
   - component: {fileID: 8461539358332584191}
   - component: {fileID: 7651410016322886529}
   m_Layer: 0
-  m_Name: cake_valley_candy-cloud-1
+  m_Name: SkyCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2690,7 +2690,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 953f8721d92033a43a842b1f6df62212, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2711,7 +2711,7 @@ GameObject:
   - component: {fileID: 7661732915138869210}
   - component: {fileID: 1002576765515203243}
   m_Layer: 0
-  m_Name: cake_valley_mountains (1)
+  m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2795,7 +2795,7 @@ GameObject:
   - component: {fileID: 8380406111946215827}
   - component: {fileID: 6353860976177842381}
   m_Layer: 0
-  m_Name: cake_valley_cotton-candy-back (4)
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2858,7 +2858,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c292e60ca429aae4e8b2cb85c6d1c85f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2882,7 +2882,7 @@ GameObject:
   - component: {fileID: 8505641797864163907}
   - component: {fileID: 6246186807183067382}
   m_Layer: 10
-  m_Name: SwitchTrigger_01 (1)
+  m_Name: SwitchTrigger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3100,7 +3100,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: ff986f1083c41c64d9645d5e73bb3a6d, type: 3}
-  m_Color: {r: 0.8947431, g: 0.9056227, b: 0.9811321, a: 1}
+  m_Color: {r: 0.8, g: 0.8, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3279,7 +3279,7 @@ GameObject:
   - component: {fileID: 5957999811761445099}
   - component: {fileID: 7898869786701497339}
   m_Layer: 0
-  m_Name: cake_valley_candy-cloud-2 (1)
+  m_Name: SkyCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3342,7 +3342,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b0411a3c236b274892774af64bdade2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3363,7 +3363,7 @@ GameObject:
   - component: {fileID: 6684066195198270841}
   - component: {fileID: 2980679327622269398}
   m_Layer: 0
-  m_Name: cake_valley_cotton-candy-back (3)
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3426,7 +3426,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c292e60ca429aae4e8b2cb85c6d1c85f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3483,7 +3483,7 @@ GameObject:
   - component: {fileID: 1096414061503228371}
   - component: {fileID: 8327795750249739671}
   m_Layer: 0
-  m_Name: cake_valley_cotton-candy-back
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3546,7 +3546,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c292e60ca429aae4e8b2cb85c6d1c85f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3567,7 +3567,7 @@ GameObject:
   - component: {fileID: 2134036635781712705}
   - component: {fileID: 450633603470810850}
   m_Layer: 0
-  m_Name: cake_valley_mountains (2)
+  m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3651,7 +3651,7 @@ GameObject:
   - component: {fileID: 4852423803293677434}
   - component: {fileID: 7166956154113088875}
   m_Layer: 0
-  m_Name: cake_valley_mountains
+  m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3766,8 +3766,8 @@ GameObject:
   - component: {fileID: 3418921070974113920}
   - component: {fileID: 3591376214865543890}
   - component: {fileID: 649442254269679474}
-  m_Layer: 0
-  m_Name: cake_valley_lemon-cake
+  m_Layer: 11
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3967,7 +3967,7 @@ GameObject:
   - component: {fileID: 6126854818459908684}
   - component: {fileID: 2138671631958012926}
   m_Layer: 0
-  m_Name: cake_valley_candy-cloud-2
+  m_Name: SkyCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4030,7 +4030,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b0411a3c236b274892774af64bdade2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.9, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
