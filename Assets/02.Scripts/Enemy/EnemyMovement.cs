@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Enemy
 {
-    private Rigidbody2D _rigidbody;
-
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
-
     public void Move(float speed, Vector2 direction)
     {
-        _rigidbody.velocity = new Vector2(direction.normalized.x * speed, _rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(direction.normalized.x * speed, rigidbody.velocity.y);
+        currentVelocity = rigidbody.velocity.x;
+        spriteRenderer.flipX = rigidbody.velocity.x > 0;
     }
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-public class EnemyAnimation : MonoBehaviour
+public class EnemyAnimation : Enemy
 {
-    private Animator _animator;
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
-
     public void ChangeAnimationState(string parameterName, int settingValue)
     {
-        _animator.SetBool(parameterName, Convert.ToBoolean(settingValue));
+        animator.SetBool(parameterName, Convert.ToBoolean(settingValue));
+    }
+
+    private void Update()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
     }
 }

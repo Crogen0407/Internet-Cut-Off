@@ -10,36 +10,52 @@ public class Enemy : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     public bool isFindPlayer;
     
+    public float currentVelocity;
+    
     //Components
     private HealthSystem _healthSystem;
+    
     private EnemyAttack _enemyAttack;
     private EnemyMovement _enemyMovement;
-    private SpriteRenderer _spriteRenderer;
+    internal EnemyAnimation enemyAnimation;
+    
+    internal SpriteRenderer spriteRenderer;
+    internal Rigidbody2D rigidbody;
+    internal Animator animator;
+
+    //Managers
+    internal PoolManager poolManager;
+
     
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _healthSystem = GetComponent<HealthSystem>();
+        
         _enemyAttack = GetComponent<EnemyAttack>();
         _enemyMovement = GetComponent<EnemyMovement>();
+        enemyAnimation = GetComponent<EnemyAnimation>();
+        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
-
+    
     private void Start()
     {
+        poolManager = PoolManager.Instance;
+        
         switch (_enemyInfoData.enemyType)
         {
             //나중에 컬러값 예쁘게 바꾸기
             case EnemyType.Yellow:
-                _spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = Color.yellow;
                 break;
             case EnemyType.Red:
-                _spriteRenderer.color = Color.red;
+                spriteRenderer.color = Color.red;
                 break;
             case EnemyType.Blue:
-                _spriteRenderer.color = Color.blue;
+                spriteRenderer.color = Color.blue;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
         
         _healthSystem.Damaged += () =>
