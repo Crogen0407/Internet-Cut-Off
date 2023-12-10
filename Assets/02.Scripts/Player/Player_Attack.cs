@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
@@ -16,6 +17,14 @@ public class Player_Attack : MonoBehaviour
     [Header("플레이어 공격사운드")]
     [SerializeField] GameObject S_Swing;
     [SerializeField] GameObject S_Throw;
+
+    private Player _player;
+
+    private void Awake()
+    {
+        _player = GetComponent<Player>();
+    }
+
     void Start()
     { 
         animer = GetComponent<Animator>();
@@ -23,7 +32,10 @@ public class Player_Attack : MonoBehaviour
 
     void Update()
     {
-        InputSys();
+        if (_player.isCutScene == false)
+        {
+            InputSys();
+        }
     }
 
     void InputSys()

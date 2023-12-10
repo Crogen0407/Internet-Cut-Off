@@ -6,28 +6,37 @@ using UnityEngine.Events;
 
 public class TimelineManager : MonoSingleton<TimelineManager>
 {
+    public EndingType endingType;
     public List<TimeLineFrame> timeline;
     public int TimeLineIndexer { get; private set; }
-    
-    
+
     
     //Controllers
     [HideInInspector] public ScreenEffectController screenEffectController;
+    [HideInInspector] public AudioController audioController;
     [HideInInspector] public CutSceneController cutSceneController;
     [HideInInspector] public Player player;
     [HideInInspector] public Transform canvasTransform;
 
     private void Awake()
     {
-        screenEffectController = FindObjectOfType<ScreenEffectController>();
+        screenEffectController = FindObjectOfType<ScreenEffectController>(); 
         cutSceneController = FindObjectOfType<CutSceneController>();
+        audioController = FindObjectOfType<AudioController>();
         player = FindObjectOfType<Player>();
         canvasTransform = FindObjectOfType<Canvas>().transform;
     }
 
     private void Start()
     {
-        StartCoroutine(StartTimeline());
+        switch (endingType)
+        {
+            case EndingType.Real:
+                break;
+            case EndingType.Internet:
+                StartCoroutine(StartTimeline());
+                break;
+        }
     }
 
     private IEnumerator StartTimeline()
