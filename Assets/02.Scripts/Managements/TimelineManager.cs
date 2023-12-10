@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class TimelineManager : MonoSingleton<TimelineManager>
 {
@@ -13,7 +14,8 @@ public class TimelineManager : MonoSingleton<TimelineManager>
     
     //Controllers
     [HideInInspector] public ScreenEffectController screenEffectController;
-    [HideInInspector] public AudioController audioController;
+    [FormerlySerializedAs("audioController")] 
+    [HideInInspector] public SoundController soundController;
     [HideInInspector] public CutSceneController cutSceneController;
     [HideInInspector] public Player player;
     [HideInInspector] public Transform canvasTransform;
@@ -22,7 +24,7 @@ public class TimelineManager : MonoSingleton<TimelineManager>
     {
         screenEffectController = FindObjectOfType<ScreenEffectController>(); 
         cutSceneController = FindObjectOfType<CutSceneController>();
-        audioController = FindObjectOfType<AudioController>();
+        soundController = FindObjectOfType<SoundController>();
         player = FindObjectOfType<Player>();
         canvasTransform = FindObjectOfType<Canvas>().transform;
     }

@@ -8,24 +8,9 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "SO/SoundVolumeData", fileName = "SoundVolumeData")]
 public class SO_SoundVolumeData : ScriptableObject
 {
-    public Transform UI_Settings { get; private set; }
-    
-    private Slider _msSoundVolumeText;
-    private Slider _sfSoundVolumeText;
-    private Slider _bgmSoundVolumeText;
-    
     [SerializeField] private int _msSoundVolume = 0;
-    [SerializeField] private int _sfSoundVolume = 0;
     [SerializeField] private int _bgmSoundVolume = 0;
-
-    public void Init()
-    {
-        UI_Settings = GameObject.Find("UI_Settings").transform;
-        
-        _msSoundVolumeText = UI_Settings.Find("MSSoundVolume/Volume").GetComponent<Slider>();
-        _sfSoundVolumeText = UI_Settings.Find("SFSoundVolume/Volume").GetComponent<Slider>();
-        _bgmSoundVolumeText = UI_Settings.Find("BGMSoundVolume/Volume").GetComponent<Slider>();
-    }
+    [SerializeField] private int _sfSoundVolume = 0;
 
     //0~10
     public int MSSoundVolume
