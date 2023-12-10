@@ -1559,6 +1559,7 @@ MonoBehaviour:
   dashTime: 0.1
   dashSpeed: 30
   Face: 1
+  isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}
   S_Jump: {fileID: 3032737540973288778, guid: 57478c2fff6467f4eb972302873383ec, type: 3}
   S_Dash: {fileID: 2135289093605939050, guid: 2295886cc215b9e4882100ae7588462c, type: 3}
@@ -1965,7 +1966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4772da4ddb2b49a4bd3b500f4770a5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cinemachineConfiner: {fileID: 0}
 --- !u!4 &1625887541
 Transform:
   m_ObjectHideFlags: 0
