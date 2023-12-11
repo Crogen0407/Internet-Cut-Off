@@ -433,7 +433,7 @@ MonoBehaviour:
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
@@ -1872,7 +1872,6 @@ GameObject:
   - component: {fileID: 1271601872}
   - component: {fileID: 1271601871}
   - component: {fileID: 1271601870}
-  - component: {fileID: 1271601878}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2033,6 +2032,7 @@ MonoBehaviour:
   dashTime: 0
   dashSpeed: 0
   Face: 1
+  isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}
   S_Jump: {fileID: 0}
   S_Dash: {fileID: 0}
