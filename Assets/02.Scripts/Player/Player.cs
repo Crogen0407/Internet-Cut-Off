@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] float dashSpeed;
     bool DDang= false;
     bool isDasing;
+    bool canDash = true;
     public sbyte Face =1; // 1 R, -1 L
     public bool isCutScene = false;
     public Vector3 developmentVelocity;
@@ -111,19 +112,25 @@ public class Player : MonoBehaviour
 #region ´ë½¬
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.S) && isDasing == false)
+        if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true)
         {
             Sound_Dash();
             isDasing = true;
             animer.SetBool("Dash", true);
             ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
-            Invoke("EndDash", dashTime+0.2f);
+            Invoke("EndDash", dashTime);
         }
     }
     void EndDash()
     {
         isDasing = false;
+        canDash = false;
         animer.SetBool("Dash", false);
+        Invoke("AfterEndDash", 1f);
+    }
+    void AfterEndDash()
+    {
+        canDash = true;
     }
     #endregion
 
