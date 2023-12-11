@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/MonoSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,7 @@
       <workItem from="1702088191062" duration="12822000" />
       <workItem from="1702251036984" duration="2172000" />
       <workItem from="1702264079226" duration="3841000" />
-      <workItem from="1702272822585" duration="369000" />
+      <workItem from="1702272822585" duration="2307000" />
     </task>
     <servers />
   </component>

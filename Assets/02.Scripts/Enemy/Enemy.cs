@@ -93,6 +93,7 @@ public class Enemy : MonoBehaviour
                 {
                     enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
                 }
+                _spriteRenderer.flipX = myPositionToPlayerPositionDirection.x > 0;
             }
         }
     }

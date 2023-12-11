@@ -22,6 +22,5 @@ public class EnemyMovement : MonoBehaviour
     {
         _rigidbody.velocity = new Vector2(direction.normalized.x * speed, _rigidbody.velocity.y);
         _enemy.currentVelocity = _rigidbody.velocity.x;
-        _spriteRenderer.flipX = _rigidbody.velocity.x > 0;
     }
 }
