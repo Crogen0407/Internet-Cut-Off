@@ -430,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentStage: 4
   _currentStageGameObject: {fileID: 0}
-  realWorldStage: {fileID: 0}
+  realWorldStage: {fileID: 871111405}
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
@@ -1053,6 +1053,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871111405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3114133367416488615, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
+  m_PrefabInstance: {fileID: 7772562437467442537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &891741487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,11 +1625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b0ab704b48a7244a8c74f19d29013d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHP: 0
   PlayerSpeed: 0
   JumpScale: 0
   dashTime: 0
   dashSpeed: 0
+  unitMaterial: {fileID: 0}
   Face: 1
   isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}
@@ -2231,7 +2236,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.5, y: 4.25}
+    oldSize: {x: 4.5, y: 1.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

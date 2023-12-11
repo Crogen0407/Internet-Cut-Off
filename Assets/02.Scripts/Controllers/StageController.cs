@@ -45,7 +45,6 @@ public class StageController : MonoSingleton<StageController>
     
     private void Awake()
     {
-        realWorldStage = GameObject.Find("RealWorld");
     }
 
     private void Start()
@@ -135,6 +134,7 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
+        Debug.Log("dkldk");
         ResetStage(0);
         OnRealWorld = false;
     }
