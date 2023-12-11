@@ -428,12 +428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5f75d81af21954e908ebcfa6da8d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentStage: 4
+  _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
