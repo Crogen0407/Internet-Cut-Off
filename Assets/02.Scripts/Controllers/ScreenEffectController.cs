@@ -10,7 +10,6 @@ public class ScreenEffectController : MonoBehaviour
     private void Awake()
     {
         SetScreenEffect("_Brightness", 0);
-        SetScreenEffect("_LatterboxCurrentSize", 0);
     }
 
     public void SetScreenEffect<T>(string type, T value) where T : struct
