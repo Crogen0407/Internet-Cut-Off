@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5f75d81af21954e908ebcfa6da8d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentStage: 4
+  _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   realWorldStage: {fileID: 871111405}
   stage:
@@ -1625,16 +1625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b0ab704b48a7244a8c74f19d29013d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSpeed: 0
-  JumpScale: 0
-  dashTime: 0
-  dashSpeed: 0
-  unitMaterial: {fileID: 0}
-  Face: 1
-  isCutScene: 0
-  developmentVelocity: {x: 0, y: 0, z: 0}
-  S_Jump: {fileID: 0}
-  S_Dash: {fileID: 0}
   Knife: {fileID: 8551089389261462237, guid: 7c52d77837808594b8561ad4c790c082, type: 3}
   KnifePos: {fileID: 1880326903}
   SwingPos: {fileID: 1793999517}

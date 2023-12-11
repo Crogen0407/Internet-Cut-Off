@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Player_Attack : Player
+public class Player_Attack : MonoBehaviour
 {
     Animator animer;
 
@@ -63,7 +63,7 @@ public class Player_Attack : Player
             //원본 프리펩 파괴가 아닌, 복사된 오브젝트 파괴
             Destroy(copy, 0.5f);*/
             Invoke("AfterKnifeAttack", 0.25f);
-            Collider2D[] coll = Physics2D.OverlapCircleAll(transform.position + new Vector3(Face * 1.5f, 0), 1.2f);
+            Collider2D[] coll = Physics2D.OverlapCircleAll(transform.position + new Vector3(_player.Face * 1.5f, 0), 1.2f);
             foreach (var item in coll)
             {
                 HealthSystem itemHealth = item.GetComponent<HealthSystem>();
