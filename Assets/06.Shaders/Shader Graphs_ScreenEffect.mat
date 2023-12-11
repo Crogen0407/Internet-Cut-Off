@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlackAndWhite: 0
-    - _Brightness: -0.002474308
+    - _Brightness: 1.0026764
     - _Power: 1.19
     - _QueueControl: 0
     - _QueueOffset: 0
