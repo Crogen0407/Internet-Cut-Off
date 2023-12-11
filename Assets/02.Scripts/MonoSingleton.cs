@@ -21,10 +21,6 @@ public class MonoSingleton<T> : MonoBehaviour where T: MonoBehaviour
                     instance = new GameObject(typeof(T).ToString()).AddComponent<T>();
                 }
             }
-            else
-            {
-                Destroy(instance.gameObject);
-            }
             return instance;
         }
     }
