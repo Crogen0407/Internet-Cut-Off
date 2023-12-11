@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_Internet.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EndingScene_Internet.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Shaders/Shader Graphs_ScreenEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Enemy.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +126,8 @@
       <workItem from="1701954871225" duration="12980000" />
       <workItem from="1701997729013" duration="7535000" />
       <workItem from="1702088191062" duration="12822000" />
-      <workItem from="1702251036984" duration="1868000" />
+      <workItem from="1702251036984" duration="2172000" />
+      <workItem from="1702264079226" duration="2714000" />
     </task>
     <servers />
   </component>

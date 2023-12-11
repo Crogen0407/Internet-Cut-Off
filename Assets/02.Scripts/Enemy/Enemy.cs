@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     
     public float currentVelocity;
     
+    [HideInInspector]public Transform visualTransform;
+    
     //Components
     [HideInInspector]public HealthSystem healthSystem;
     
@@ -19,9 +21,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]public EnemyMovement enemyMovement;
     [HideInInspector]public EnemyAnimation enemyAnimation;
     
-    [HideInInspector]public SpriteRenderer spriteRenderer;
-    [HideInInspector]public Rigidbody2D rigidbody;
-    [HideInInspector]public Animator animator;
+     private SpriteRenderer _spriteRenderer;
 
     //Managers
     [HideInInspector]public PoolManager poolManager;
@@ -29,15 +29,14 @@ public class Enemy : MonoBehaviour
     
     private void Awake()
     {
+        visualTransform = transform.Find("Visual");
         healthSystem = GetComponent<HealthSystem>();
         
         enemyAttack = GetComponent<EnemyAttack>();
         enemyMovement = GetComponent<EnemyMovement>();
-        enemyAnimation = GetComponent<EnemyAnimation>();
-        
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        enemyAnimation = visualTransform.GetComponent<EnemyAnimation>();
+
+        _spriteRenderer = visualTransform.GetComponent<SpriteRenderer>();
     }
     
     private void Start()
@@ -48,13 +47,13 @@ public class Enemy : MonoBehaviour
         {
             //나중에 컬러값 예쁘게 바꾸기
             case EnemyType.Yellow:
-                spriteRenderer.color = Color.yellow;
+                _spriteRenderer.color = Color.yellow;
                 break;
             case EnemyType.Red:
-                spriteRenderer.color = Color.red;
+                _spriteRenderer.color = Color.red;
                 break;
             case EnemyType.Blue:
-                spriteRenderer.color = Color.blue;
+                _spriteRenderer.color = Color.blue;
                 break;
         }
         
@@ -86,6 +85,7 @@ public class Enemy : MonoBehaviour
                 {
                     if (enemyAttack.isAttacking == false)
                     {
+                        currentVelocity = 0;
                         enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
                     }
                 }
