@@ -649,8 +649,8 @@
     "m_Value": 1.0,
     "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 1.0,
-        "y": 3.0
+        "x": 0.5,
+        "y": 2.0
     }
 }
 
