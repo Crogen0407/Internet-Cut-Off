@@ -45,8 +45,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlackAndWhite: 1
-    - _Brightness: 1.004782
+    - _BlackAndWhite: 0
+    - _Brightness: 0.7376525
     - _LatterboxCurrentSize: 0
     - _LetterboxMaxSize: 0.24
     - _Power: 1.19

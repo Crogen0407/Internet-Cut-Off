@@ -431,9 +431,9 @@ MonoBehaviour:
   _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   stage:
-  - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
+  - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   PlayerSpeed: 10
   JumpScale: 20
   dashTime: 0.1
-  dashSpeed: 25
+  dashSpeed: 20
   Face: 1
   isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}
