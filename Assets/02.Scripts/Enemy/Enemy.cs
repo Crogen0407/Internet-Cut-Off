@@ -10,22 +10,39 @@ public class Enemy : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     public bool isFindPlayer;
     
+    public float currentVelocity;
+    
+    [HideInInspector]public Transform visualTransform;
+    
     //Components
-    private HealthSystem _healthSystem;
-    private EnemyAttack _enemyAttack;
-    private EnemyMovement _enemyMovement;
-    private SpriteRenderer _spriteRenderer;
+    [HideInInspector]public HealthSystem healthSystem;
+    
+    [HideInInspector]public EnemyAttack enemyAttack;
+    [HideInInspector]public EnemyMovement enemyMovement;
+    [HideInInspector]public EnemyAnimation enemyAnimation;
+    
+     private SpriteRenderer _spriteRenderer;
+
+    //Managers
+    [HideInInspector]public PoolManager poolManager;
+
     
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _healthSystem = GetComponent<HealthSystem>();
-        _enemyAttack = GetComponent<EnemyAttack>();
-        _enemyMovement = GetComponent<EnemyMovement>();
-    }
+        visualTransform = transform.Find("Visual");
+        healthSystem = GetComponent<HealthSystem>();
+        
+        enemyAttack = GetComponent<EnemyAttack>();
+        enemyMovement = GetComponent<EnemyMovement>();
+        enemyAnimation = visualTransform.GetComponent<EnemyAnimation>();
 
+        _spriteRenderer = visualTransform.GetComponent<SpriteRenderer>();
+    }
+    
     private void Start()
     {
+        poolManager = PoolManager.Instance;
+        
         switch (_enemyInfoData.enemyType)
         {
             //나중에 컬러값 예쁘게 바꾸기
@@ -38,15 +55,13 @@ public class Enemy : MonoBehaviour
             case EnemyType.Blue:
                 _spriteRenderer.color = Color.blue;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
         
-        _healthSystem.Damaged += () =>
+        healthSystem.Damaged += () =>
         {
             Debug.Log("아야");
         };
-        _healthSystem.Dead += () =>
+        healthSystem.Dead += () =>
         {
             //나중에 오브젝트 풀링으로 바꾸기
             Destroy(gameObject);
@@ -68,14 +83,15 @@ public class Enemy : MonoBehaviour
                 Debug.DrawRay(transform.position, myPositionToPlayerPositionDirection * _enemyInfoData.viewingRadius);
                 if (Vector2.Distance(collider.transform.position, transform.position) < _enemyInfoData.maxAttackRangeRadius)
                 {
-                    if (_enemyAttack.isAttacking == false)
+                    if (enemyAttack.isAttacking == false)
                     {
-                        _enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
+                        currentVelocity = 0;
+                        enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
                     }
                 }
                 else
                 {
-                    _enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
+                    enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
                 }
             }
         }
