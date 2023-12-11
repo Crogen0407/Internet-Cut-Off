@@ -13,26 +13,26 @@ public class Enemy : MonoBehaviour
     public float currentVelocity;
     
     //Components
-    private HealthSystem _healthSystem;
+    [HideInInspector]public HealthSystem healthSystem;
     
-    private EnemyAttack _enemyAttack;
-    private EnemyMovement _enemyMovement;
-    internal EnemyAnimation enemyAnimation;
+    [HideInInspector]public EnemyAttack enemyAttack;
+    [HideInInspector]public EnemyMovement enemyMovement;
+    [HideInInspector]public EnemyAnimation enemyAnimation;
     
-    internal SpriteRenderer spriteRenderer;
-    internal Rigidbody2D rigidbody;
-    internal Animator animator;
+    [HideInInspector]public SpriteRenderer spriteRenderer;
+    [HideInInspector]public Rigidbody2D rigidbody;
+    [HideInInspector]public Animator animator;
 
     //Managers
-    internal PoolManager poolManager;
+    [HideInInspector]public PoolManager poolManager;
 
     
     private void Awake()
     {
-        _healthSystem = GetComponent<HealthSystem>();
+        healthSystem = GetComponent<HealthSystem>();
         
-        _enemyAttack = GetComponent<EnemyAttack>();
-        _enemyMovement = GetComponent<EnemyMovement>();
+        enemyAttack = GetComponent<EnemyAttack>();
+        enemyMovement = GetComponent<EnemyMovement>();
         enemyAnimation = GetComponent<EnemyAnimation>();
         
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -58,11 +58,11 @@ public class Enemy : MonoBehaviour
                 break;
         }
         
-        _healthSystem.Damaged += () =>
+        healthSystem.Damaged += () =>
         {
             Debug.Log("아야");
         };
-        _healthSystem.Dead += () =>
+        healthSystem.Dead += () =>
         {
             //나중에 오브젝트 풀링으로 바꾸기
             Destroy(gameObject);
@@ -84,14 +84,14 @@ public class Enemy : MonoBehaviour
                 Debug.DrawRay(transform.position, myPositionToPlayerPositionDirection * _enemyInfoData.viewingRadius);
                 if (Vector2.Distance(collider.transform.position, transform.position) < _enemyInfoData.maxAttackRangeRadius)
                 {
-                    if (_enemyAttack.isAttacking == false)
+                    if (enemyAttack.isAttacking == false)
                     {
-                        _enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
+                        enemyAttack.Attack(_enemyInfoData.attackDamage, _enemyInfoData.attackDelay, myPositionToPlayerPositionDirection);
                     }
                 }
                 else
                 {
-                    _enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
+                    enemyMovement.Move(_enemyInfoData.moveSpeed, myPositionToPlayerPositionDirection);
                 }
             }
         }
