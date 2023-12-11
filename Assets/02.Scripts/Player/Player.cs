@@ -23,17 +23,26 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject S_Dash;
     private HealthSystem _healthSystem;
     
-    
     private void Awake()
     {
         _healthSystem = GetComponent<HealthSystem>();
+        _healthSystem.Damaged += () =>
+        {
+            
+        };
         
+        _healthSystem.Dead += () =>
+        {
+            
+        };
     }
 
     void Start()
     {
         ri = GetComponent<Rigidbody2D>();
         animer = GetComponent<Animator>();
+        
+        
     }
 
     void Update()
