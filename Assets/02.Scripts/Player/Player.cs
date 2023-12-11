@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,7 +8,6 @@ public class Player : MonoBehaviour
     Animator animer;
 
     [Header("플레이어 기본셋팅")]
-    [SerializeField] float PlayerHP;
     [SerializeField] float PlayerSpeed;
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
@@ -21,6 +21,14 @@ public class Player : MonoBehaviour
     [Header("플레이어 기본사운드")]
     [SerializeField] GameObject S_Jump;
     [SerializeField] GameObject S_Dash;
+    private HealthSystem _healthSystem;
+    
+    
+    private void Awake()
+    {
+        _healthSystem = GetComponent<HealthSystem>();
+        
+    }
 
     void Start()
     {
