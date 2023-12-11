@@ -7199,7 +7199,7 @@ MonoBehaviour:
             m_StringArgument: _LatterboxCurrentSize
             m_BoolArgument: 1
           m_CallState: 2
-  - delayTime: 5
+  - delayTime: 4
     frameEvent:
       m_PersistentCalls:
         m_Calls:
