@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         _screenEffectController.Fade("_Brightness", 0, 2);
         yield return new WaitForSecondsRealtime(2);
         _stageController.ResetStage(_stageController.CurrentStage);
-        _healthSystem.Hp = 60;
+        _healthSystem.Hp = 30;
     }
     
     void Start()
