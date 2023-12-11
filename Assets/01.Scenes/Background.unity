@@ -431,19 +431,19 @@ MonoBehaviour:
   _currentStage: 0
   _currentStageGameObject: {fileID: 0}
   stage:
-  - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
+  - stagePrefab: {fileID: 1923378996629121700, guid: 298e5d130fc7a0c46a77c61021bd1673, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 2003913716892461805, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
+  - stagePrefab: {fileID: 2003913716892461805, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
+  - stagePrefab: {fileID: 1918522777446496491, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
@@ -1872,9 +1872,9 @@ GameObject:
   - component: {fileID: 1271601872}
   - component: {fileID: 1271601871}
   - component: {fileID: 1271601870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

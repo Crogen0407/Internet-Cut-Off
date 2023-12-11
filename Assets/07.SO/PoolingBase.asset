@@ -15,4 +15,4 @@ MonoBehaviour:
   pairs:
   - prefab: {fileID: 8512328122956378512, guid: 3a2934079ce51b04e967dceb6bb9349a, type: 3}
     prefabTypeName: EnemyBullet
-    poolCount: 50
+    poolCount: 100

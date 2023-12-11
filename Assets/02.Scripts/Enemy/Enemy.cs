@@ -42,7 +42,6 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         poolManager = PoolManager.Instance;
-        
         switch (_enemyInfoData.enemyType)
         {
             //나중에 컬러값 예쁘게 바꾸기

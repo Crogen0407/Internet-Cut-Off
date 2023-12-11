@@ -25,8 +25,13 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        HealthSystem healthSystem = other.GetComponent<HealthSystem>();
         if (other.CompareTag("Player") || other.CompareTag("Untagged"))
         {
+            if (healthSystem != null)
+            {
+                healthSystem.Hp -= 10;
+            }
             _poolManager.Push("EnemyBullet", gameObject);
         }
     }

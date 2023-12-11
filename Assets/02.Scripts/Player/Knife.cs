@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Knife : MonoBehaviour
@@ -24,9 +25,17 @@ public class Knife : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
+        GameObject triggerObject = other.gameObject;
+        HealthSystem healthSystem = other.GetComponent<HealthSystem>();
+        if (triggerObject.CompareTag("Enemy") || triggerObject.CompareTag("Untagged"))
+        {
+            if (healthSystem != null)
+            {
+                healthSystem.Hp -= 10;
+            }
+            Destroy(gameObject);
+        }
     }
 }
