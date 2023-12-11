@@ -80,7 +80,6 @@ public class StageController : MonoSingleton<StageController>
                 _screenEffectController.Fade("_Brightness", 0, 1, () =>
                 {
                     ResetStage(value);
-                    _screenEffectController.Fade("_Brightness", 3, 1);
                 });
             }
             _currentStage = value;

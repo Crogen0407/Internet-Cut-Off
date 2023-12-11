@@ -7,18 +7,6 @@ public class MonoSingleton<T> : MonoBehaviour where T: MonoBehaviour
 {
     private static T instance = null;
 
-    delegate int gg(int a, int b);
-
-    private void Start()
-    {
-        gg DD = delegate(int i, int i1)
-        {
-            return 1;
-        };
-
-        DD?.Invoke(1, 2);
-    }
-
 
     public static T Instance
     {
@@ -26,7 +14,7 @@ public class MonoSingleton<T> : MonoBehaviour where T: MonoBehaviour
         {
             if (instance == null)
             {
-                instance = FindObjectOfType<T>();
+                instance = (T)FindObjectOfType(typeof(T));
 
                 if (instance == null)
                 {

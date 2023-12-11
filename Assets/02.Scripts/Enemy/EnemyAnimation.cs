@@ -8,7 +8,7 @@ public class EnemyAnimation : MonoBehaviour
     
     private void Awake()
     {
-        _enemy = GetComponent<Enemy>();
+        _enemy = GetComponentInParent<Enemy>();
     }
 
     private void Start()

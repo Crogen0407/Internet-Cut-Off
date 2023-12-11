@@ -11,11 +11,8 @@ public class EnemyMovement : MonoBehaviour
     {
         _enemy = GetComponent<Enemy>();
         _rigidbody = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
         _spriteRenderer = _enemy.visualTransform.GetComponent<SpriteRenderer>();
+
     }
 
     public void Move(float speed, Vector2 direction)

@@ -25,6 +25,7 @@ public class SwitchTrigger : MonoBehaviour
             _spriteRenderer.color = Color.green;
             switchOperation = true;
             GameManager.Instance.stageController.CheckSwitch();
+            gameObject.SetActive(false);
         };
     }
 }
