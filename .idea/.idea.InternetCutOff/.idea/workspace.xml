@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="256836d4-b8e2-429b-b257-4cf984b4c32e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternetCutOff/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/EnemyAndPostProcessing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAnimation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.Animations/Enemy/Enemy_Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/10.Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/10.Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/MonoSingleton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/b9/35368fb2/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/ca/7e5e81d0/Gizmos.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b93114940d45463da98e2cb2dda4376520a00/e5/f0d1d8b8/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../_MySchool/GameEngineClass/2DRPG/Assets/Scripts/SceneManagement/Singleton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../_Portfolioes/GK-99/GK-99/Assets/00.Scripts/Controllers/ScreenEffectController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../_Portfolioes/GK-99/GK-99/Assets/00.Scripts/Enemy/EnemyAttack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../_Portfolioes/GK-99/GK-99/Assets/00.Scripts/Enemy/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
@@ -56,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CutScene&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -127,7 +122,8 @@
       <workItem from="1701997729013" duration="7535000" />
       <workItem from="1702088191062" duration="12822000" />
       <workItem from="1702251036984" duration="2172000" />
-      <workItem from="1702264079226" duration="2714000" />
+      <workItem from="1702264079226" duration="3841000" />
+      <workItem from="1702272822585" duration="369000" />
     </task>
     <servers />
   </component>
