@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
     [SerializeField] float dashSpeed;
-    [FormerlySerializedAs("_unitMaterial")] public Material unitMaterial;
+    public Material unitMaterial;
     bool DDang= false;
     bool isDasing;
     bool canDash = true;
