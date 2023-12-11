@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19366a201411474b816c23bb8a755ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionKeyCode: 120
+  interactionKeyCode: 97
   ButtonObj: {fileID: 6983668767163898905, guid: 26161a40f574f414f8f07d743fb95bb2, type: 3}
   ButtonPos: {fileID: 670808333}
 --- !u!114 &1271601876
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}
   S_Jump: {fileID: 3032737540973288778, guid: 57478c2fff6467f4eb972302873383ec, type: 3}
-  S_Dash: {fileID: 2135289093605939050, guid: 2295886cc215b9e4882100ae7588462c, type: 3}
+  S_Dash: {fileID: 1967324877580591105, guid: 9a65cb23e767b6444a71dd7cde89d9aa, type: 3}
 --- !u!4 &1271601877
 Transform:
   m_ObjectHideFlags: 0

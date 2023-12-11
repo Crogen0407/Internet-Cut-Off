@@ -280,6 +280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
+  S_attack: {fileID: 3846480141568796842, guid: 6277a8fc818645f40b3c13e322d20ea8, type: 3}
+  S_shot: {fileID: 539612944769453913, guid: d34c4897bcc18b64ebb1f04526d0a686, type: 3}
 --- !u!114 &8326284468942031533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,3 +294,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e27ee740d7b47a88710e95c18c9f2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  S_move: {fileID: 2254614999121819507, guid: 36a50302615329e42a2d93fd01d09d55, type: 3}
