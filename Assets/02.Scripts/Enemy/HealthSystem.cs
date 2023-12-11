@@ -32,7 +32,7 @@ public class HealthSystem : MonoBehaviour
             {
                 Damaged?.Invoke();
             }
-            if (_hp <= 0)
+            if (_hp == 0)
             {
                 Dead?.Invoke();
             }

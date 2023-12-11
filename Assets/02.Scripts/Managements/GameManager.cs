@@ -23,6 +23,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
+        Debug.Log("dkdk");
         stageController.StartFirstStage();
         screenEffectController.SetScreenEffect("_LatterboxCurrentSize", 0);
     }
