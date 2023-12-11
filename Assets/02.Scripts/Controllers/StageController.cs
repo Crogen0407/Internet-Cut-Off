@@ -16,7 +16,7 @@ public class StageController : MonoSingleton<StageController>
     
     //Controllers
     private CinemachineController _cinemachineController;
-    private ScreenEffectControllder _screenEffectControllder;
+    private ScreenEffectController _screenEffectController;
     
     public bool OnRealWorld
     {
@@ -24,7 +24,7 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             _onRealWorld = value;
-            _screenEffectControllder.SetScreenEffect("_BlackAndWhite", _onRealWorld);
+            _screenEffectController.SetScreenEffect("_BlackAndWhite", _onRealWorld);
             _realWorldStage.SetActive(_onRealWorld);
             _currentStageGameObject.SetActive(!_onRealWorld);
         }
@@ -39,7 +39,7 @@ public class StageController : MonoSingleton<StageController>
     {
         _gameManager = GameManager.Instance;
         _cinemachineController = _gameManager.cinemachineController;
-        _screenEffectControllder = _gameManager.screenEffectControllder;
+        _screenEffectController = _gameManager.screenEffectController;
     }
 
     private void ResetStage(int value)
@@ -49,6 +49,7 @@ public class StageController : MonoSingleton<StageController>
             Destroy(_currentStageGameObject);
         }
         _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
+        _gameManager.player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
         PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
         if (boundShape.isTrigger == false)
         {
@@ -76,10 +77,10 @@ public class StageController : MonoSingleton<StageController>
             }
             else if (_currentStage < value)
             {
-                _screenEffectControllder.BrightnessFade(0, 1, () =>
+                _screenEffectController.Fade("_Brightness", 0, 1, () =>
                 {
                     ResetStage(value);
-                    _screenEffectControllder.BrightnessFade(3, 1);
+                    _screenEffectController.Fade("_Brightness", 3, 1);
                 });
             }
             _currentStage = value;
@@ -111,7 +112,7 @@ public class StageController : MonoSingleton<StageController>
     public void StartFirstStage()
     {
         ResetStage(0);
-        _screenEffectControllder.BrightnessFade(3, 1);
+        _screenEffectController.Fade("_Brightness", 3, 1);
         OnRealWorld = false;
     }
     

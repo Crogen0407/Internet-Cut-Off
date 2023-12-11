@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player_SangHoJakYong : MonoBehaviour
@@ -11,6 +12,13 @@ public class Player_SangHoJakYong : MonoBehaviour
     [SerializeField] GameObject ButtonObj;
     [SerializeField] GameObject ButtonPos;
 
+    private Player _player;
+
+    private void Awake()
+    {
+        _player = GetComponent<Player>();
+    }
+
     void Start()
     {
         PlayerMain = GameObject.Find("Player");
@@ -20,10 +28,9 @@ public class Player_SangHoJakYong : MonoBehaviour
     void Update()
     {
         Face = PlayerMain.GetComponent<Player>().Face;
-        SangHoJakYong();
-        if (Input.GetKeyDown(KeyCode.A))
+        if (_player.isCutScene == false)
         {
-            
+            SangHoJakYong();
         }
     }
 

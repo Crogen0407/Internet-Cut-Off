@@ -9,4 +9,5 @@ public class StageData
     [Space] [Header("SwitchTrigger")] 
     public List<SwitchTrigger> switchTriggers;
     public bool isChangeToRealWorld;
+    public Vector2 playerSpawnPosition;
 }

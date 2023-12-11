@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     bool isDasing;
     bool canDash = true;
     public sbyte Face =1; // 1 R, -1 L
-
+    public bool isCutScene = false;
     public Vector3 developmentVelocity;
 
     [Header("플레이어 기본사운드")]
@@ -33,9 +33,12 @@ public class Player : MonoBehaviour
     {
         animer.SetFloat("Run", Mathf.Abs(ri.velocity.x));
         Move();
-        JumpGamji();
-        Jump();
-        Dash();
+        if (isCutScene == false)
+        {
+            JumpGamji();
+            Jump();
+            Dash();
+        }
         SetFace();
     }
 
@@ -45,19 +48,22 @@ public class Player : MonoBehaviour
         //이동
         if (isDasing == false) 
         { 
-            Vector3 vel = new Vector3(1,0,0) * Input.GetAxisRaw("Horizontal") * PlayerSpeed * 1;
+            Vector3 vel = new Vector3(1,0,0) * (isCutScene == false ? (Input.GetAxisRaw("Horizontal")) : 0) * PlayerSpeed * 1;
             vel.y = ri.velocity.y;
             vel += developmentVelocity;
             ri.velocity = vel; 
         }
         //Face
-        if (Input.GetAxisRaw("Horizontal") == -1)
+        if (isCutScene == false)
         {
-            Face = -1;
-        }
-        else if (Input.GetAxisRaw("Horizontal") == 1)
-        {
-            Face = 1;
+            if (Input.GetAxisRaw("Horizontal") == -1)
+            {
+                Face = -1;
+            }
+            else if (Input.GetAxisRaw("Horizontal") == 1)
+            {
+                Face = 1;
+            }
         }
     }
 
@@ -152,5 +158,10 @@ public class Player : MonoBehaviour
         animer.SetBool("Jump", false);
         animer.SetBool("Dash", false);
         animer.SetBool("Attack", false);
+    }
+    
+    public void SetPlayerCutSceneMode(bool parameter)
+    {
+        isCutScene = parameter;
     }
 }
