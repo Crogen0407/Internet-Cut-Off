@@ -24,7 +24,10 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
-        stageController.StartFirstStage();
+        if (stageController != null)
+        {
+            stageController.StartFirstStage();
+        }
     }
 
     private void Update()
