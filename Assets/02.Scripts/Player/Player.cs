@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
     [SerializeField] float dashSpeed;
+    [SerializeField] private Material _unitMaterial;
     bool DDang= false;
     bool isDasing;
     public sbyte Face =1; // 1 R, -1 L
@@ -33,10 +35,23 @@ public class Player : MonoBehaviour
         
         _healthSystem.Dead += () =>
         {
-            
+            StartCoroutine(OnNoiseCoroutine());
         };
     }
 
+    private IEnumerator OnNoiseCoroutine()
+    {
+        float percent = 0;
+        float duration = 0;
+        while (percent < 1)
+        {
+            duration += Time.deltaTime;
+            percent = duration / 1f;
+            _unitMaterial.SetFloat("_Noise", percent);
+            yield return null;
+        }
+    }
+    
     void Start()
     {
         ri = GetComponent<Rigidbody2D>();
