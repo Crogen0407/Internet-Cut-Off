@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StageController : MonoSingleton<StageController>
 {
+    private int _realworldCountIndex = 0;
     [SerializeField] private int _currentStage;
     [SerializeField] private GameObject _currentStageGameObject;
-    private GameObject _realWorldStage;
+    public GameObject realWorldStage;
     [SerializeField] private List<StageData> stage;
     private bool _onRealWorld;
+    public bool sleepAtRealworld;
+    
     
     //Managemets
     private GameManager _gameManager;
@@ -17,6 +21,7 @@ public class StageController : MonoSingleton<StageController>
     //Controllers
     private CinemachineController _cinemachineController;
     private ScreenEffectController _screenEffectController;
+    private VolumeController _volumeController;
     
     public bool OnRealWorld
     {
@@ -24,15 +29,23 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             _onRealWorld = value;
-            _screenEffectController.SetScreenEffect("_BlackAndWhite", _onRealWorld);
-            _realWorldStage.SetActive(_onRealWorld);
-            _currentStageGameObject.SetActive(!_onRealWorld);
+            realWorldStage.SetActive(_onRealWorld);
+            if (_onRealWorld == true)
+            {
+                _volumeController.SetSaturation(_realworldCountIndex);
+                _gameManager.player.transform.position = realWorldStage.transform.Find("SpawnPoint").position;
+                _realworldCountIndex -= 20;
+            }
+            else
+            {
+                _volumeController.SetSaturation(0);
+            }
         }
     }
     
     private void Awake()
     {
-        _realWorldStage = GameObject.Find("RealWorld");
+        realWorldStage = GameObject.Find("RealWorld");
     }
 
     private void Start()
@@ -40,6 +53,7 @@ public class StageController : MonoSingleton<StageController>
         _gameManager = GameManager.Instance;
         _cinemachineController = _gameManager.cinemachineController;
         _screenEffectController = _gameManager.screenEffectController;
+        _volumeController = _gameManager.volumeController;
     }
 
     public void ResetStage(int value)
@@ -96,12 +110,17 @@ public class StageController : MonoSingleton<StageController>
     }
     
     [ContextMenu("GoToInternetWorld")]
-    private void GoToInternetWorld()
+    public void GoToInternetWorld()
     {
         if (_onRealWorld == true)
         {
-            _currentStageGameObject = Instantiate(stage[_currentStage].stagePrefab, Vector3.zero, Quaternion.identity);
-            OnRealWorld = false;
+            _screenEffectController.Fade("_Brightness", 0, 1, () =>
+            {
+                ResetStage(_currentStage);
+                _gameManager.player.isCutScene = false;
+                OnRealWorld = false;
+            });
+            sleepAtRealworld = false;
         }
     }
     

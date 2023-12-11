@@ -9,7 +9,7 @@ public class GameManager : MonoSingleton<GameManager>
     [HideInInspector] public StageController stageController;
     [HideInInspector] public CinemachineController cinemachineController;
     [HideInInspector] public ScreenEffectController screenEffectController;
-    
+    [HideInInspector] public VolumeController volumeController;
     [HideInInspector] public Player player;
     
     private void Awake()
@@ -17,13 +17,13 @@ public class GameManager : MonoSingleton<GameManager>
         stageController = FindObjectOfType<StageController>();
         cinemachineController = FindObjectOfType<CinemachineController>();
         screenEffectController = FindObjectOfType<ScreenEffectController>();
-
+        volumeController = FindObjectOfType<VolumeController>();
+        
         player = FindObjectOfType<Player>();
     }
 
     private void Start()
     {
-        Debug.Log("dkdk");
         stageController.StartFirstStage();
         screenEffectController.SetScreenEffect("_LatterboxCurrentSize", 0);
     }
