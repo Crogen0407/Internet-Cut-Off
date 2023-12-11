@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class StageController : MonoSingleton<StageController>
@@ -99,11 +100,20 @@ public class StageController : MonoSingleton<StageController>
             }
             else if (_currentStage < value)
             {
-                _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                if (_currentStage + 1 == stage.Count)
                 {
-                    ResetStage(value);
-                });
-
+                    _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                    {
+                        SceneManager.LoadScene("EndingScene_PlayerChoice");
+                    });
+                }
+                else
+                {
+                    _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                    {
+                        ResetStage(value);
+                    });
+                }
             }
             _currentStage = value;
         }
