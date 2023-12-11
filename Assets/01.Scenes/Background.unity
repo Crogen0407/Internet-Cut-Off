@@ -447,7 +447,7 @@ MonoBehaviour:
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 9201081258793482902, guid: a17443ee6294d24429be814a4385d5db, type: 3}
+  - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   PlayerSpeed: 10
   JumpScale: 20
   dashTime: 0.1
-  dashSpeed: 25
+  dashSpeed: 15
   unitMaterial: {fileID: 2100000, guid: ba135a98fc166914689618b600b852cd, type: 2}
   Face: 1
   isCutScene: 0
