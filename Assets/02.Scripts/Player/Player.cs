@@ -125,13 +125,26 @@ public class Player : MonoBehaviour
 #region 점프관련
     private void JumpGamji()
     {
-        //Debug.DrawRay(ri.position, Vector3.down, new Color(0,1,0));
-        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+        Debug.DrawRay(ri.position + new Vector2(0.2f, 0), Vector3.down, new Color(0,1,0));
+        Debug.DrawRay(ri.position + new Vector2(-0.2f, 0), Vector3.down, new Color(0, 1, 0));
+        RaycastHit2D RaySir = Physics2D.Raycast(ri.position+new Vector2(0.2f,0), Vector3.down, 1, LayerMask.GetMask("Platform"));
         if (ri.velocity.y < 0)
         {
             if (RaySir.collider != null)
             {
                 if (RaySir.distance < 1.0f)
+                {
+                    animer.SetBool("Jump", false);
+                    DDang = false;
+                }
+            }
+        }
+        RaycastHit2D RaySir2 = Physics2D.Raycast(ri.position + new Vector2(-0.2f, 0), Vector3.down, 1, LayerMask.GetMask("Platform"));
+        if (ri.velocity.y < 0)
+        {
+            if (RaySir2.collider != null)
+            {
+                if (RaySir2.distance < 1.0f)
                 {
                     animer.SetBool("Jump", false);
                     DDang = false;
