@@ -9,11 +9,11 @@ public class EnemyAnimation : MonoBehaviour
     private void Awake()
     {
         _enemy = GetComponentInParent<Enemy>();
-        _animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
+        _animator = GetComponent<Animator>();
     }
 
     public void SetAnimationState(string parameterName, int settingValue)
@@ -29,10 +29,5 @@ public class EnemyAnimation : MonoBehaviour
     private void Update()
     {
         _animator.SetFloat("Speed", Mathf.Abs(_enemy.currentVelocity));
-    }
-
-    public void OnEvent()
-    {
-        
     }
 }

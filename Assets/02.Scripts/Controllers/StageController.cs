@@ -42,12 +42,14 @@ public class StageController : MonoSingleton<StageController>
         _screenEffectController = _gameManager.screenEffectController;
     }
 
-    private void ResetStage(int value)
+    public void ResetStage(int value)
     {
-        if (_currentStageGameObject != null)
+        _screenEffectController.Fade("_Brightness", 0, 1);
+         if (_currentStageGameObject != null)
         {
             Destroy(_currentStageGameObject);
         }
+
         _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
         _gameManager.player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
         PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
@@ -58,11 +60,17 @@ public class StageController : MonoSingleton<StageController>
         _cinemachineController.SetCinemachineConfinerBoundingShape(boundShape);
         SwitchTrigger[] switchTriggers = _currentStageGameObject.transform.Find("Objects").GetComponentsInChildren<SwitchTrigger>();
         int index = 0;
+        stage[value].switchTriggers.Clear();
         foreach (var item in switchTriggers)
         {
             stage[value].switchTriggers.Add(item);
             index++;
         }
+        _gameManager.player.unitMaterial.SetFloat("_Noise", 0);
+    }
+
+    public void RestartStage()
+    {
     }
     
     public int CurrentStage
@@ -81,6 +89,7 @@ public class StageController : MonoSingleton<StageController>
                 {
                     ResetStage(value);
                 });
+
             }
             _currentStage = value;
         }
@@ -98,12 +107,9 @@ public class StageController : MonoSingleton<StageController>
     
     public void CheckSwitch()
     {
-        foreach (SwitchTrigger switchTrigger in stage[_currentStage].switchTriggers)
+        foreach (SwitchTrigger switchTrigger in stage[CurrentStage].switchTriggers)
         {
-            if (switchTrigger.switchOperation == false)
-            {
-                return;
-            }
+            if (switchTrigger.switchOperation == false) return;
         }
         NextStage();
     }
@@ -111,7 +117,6 @@ public class StageController : MonoSingleton<StageController>
     public void StartFirstStage()
     {
         ResetStage(0);
-        _screenEffectController.Fade("_Brightness", 3, 1);
         OnRealWorld = false;
     }
     

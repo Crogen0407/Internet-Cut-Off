@@ -82,6 +82,8 @@ public class ScreenEffectController : MonoBehaviour
             }
             yield return null;
         }
+
+        yield return new WaitForSecondsRealtime(duration);
         lateAction?.Invoke();
     }
 }

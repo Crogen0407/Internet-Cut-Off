@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -7,11 +10,11 @@ public class Player : MonoBehaviour
     Animator animer;
 
     [Header("플레이어 기본셋팅")]
-    [SerializeField] float PlayerHP;
     [SerializeField] float PlayerSpeed;
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
     [SerializeField] float dashSpeed;
+    [FormerlySerializedAs("_unitMaterial")] public Material unitMaterial;
     bool DDang= false;
     bool isDasing;
     public sbyte Face =1; // 1 R, -1 L
@@ -21,11 +24,50 @@ public class Player : MonoBehaviour
     [Header("플레이어 기본사운드")]
     [SerializeField] GameObject S_Jump;
     [SerializeField] GameObject S_Dash;
+    private HealthSystem _healthSystem;
+    private StageController _stageController;
+    private ScreenEffectController _screenEffectController;
+    
+    private void Awake()
+    {
+        _healthSystem = GetComponent<HealthSystem>();
+        unitMaterial.SetFloat("_Noise", 0);
+    }
 
+    private IEnumerator OnNoiseCoroutine()
+    {
+        float percent = 0;
+        float duration = 0;
+        while (percent < 1)
+        {
+            duration += Time.deltaTime;
+            percent = duration / 1f;
+            unitMaterial.SetFloat("_Noise", percent);
+            yield return null;
+        }
+        yield return new WaitForSecondsRealtime(1);
+        _screenEffectController.Fade("_Brightness", 0, 2);
+        yield return new WaitForSecondsRealtime(2);
+        _stageController.ResetStage(_stageController.CurrentStage);
+        _healthSystem.Hp = 60;
+    }
+    
     void Start()
     {
         ri = GetComponent<Rigidbody2D>();
         animer = GetComponent<Animator>();
+        _stageController = GameManager.Instance.stageController;
+        _screenEffectController = GameManager.Instance.screenEffectController;
+        
+        _healthSystem.Damaged += () =>
+        {
+            
+        };
+        
+        _healthSystem.Dead += () =>
+        {
+            StartCoroutine(OnNoiseCoroutine());
+        };
     }
 
     void Update()
