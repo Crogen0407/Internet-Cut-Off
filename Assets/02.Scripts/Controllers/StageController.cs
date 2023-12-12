@@ -48,6 +48,7 @@ public class StageController : MonoSingleton<StageController>
             {
                 _volumeController.SetSaturation(0);
                 _gameManager.Player.transform.Find("w").gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                _gameManager.Player.transform.Find("w").gameObject.SetActive(true);
             }
         }
     }
@@ -66,6 +67,7 @@ public class StageController : MonoSingleton<StageController>
 
     public void ResetStage(int value)
     {
+        _gameManager.Player.transform.Find("w").gameObject.SetActive(true);
         _gameManager.Player.isCutScene = true;
         _screenEffectController.Fade("_Brightness", 0, 1, () =>
         {

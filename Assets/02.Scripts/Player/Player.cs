@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator OnNoiseCoroutine()
     {
+        transform.Find("w").gameObject.SetActive(false);
         float percent = 0;
         float duration = 0;
         while (percent < 1)
