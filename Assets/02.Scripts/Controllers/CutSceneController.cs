@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutSceneController : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class CutSceneController : MonoBehaviour
         _screenEffectController.Fade(type, 0, 2);
     }
 
+    public void MoveScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    
     public void LatterboxFade(float duration)
     {
         StartCoroutine(LatterboxFadeCoroutine(duration));

@@ -6618,6 +6618,117 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &1598329656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2122257472}
+    m_Modifications:
+    - target: {fileID: 1124457039173185268, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_Name
+      value: DoorUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124457039173185268, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 354.16666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+--- !u!224 &1598329657 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7784690765830407067, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+  m_PrefabInstance: {fileID: 1598329656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1598329658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1124457039173185268, guid: 6ca496cfcdc6f2141ab7b0dd1e4ffb3e, type: 3}
+  m_PrefabInstance: {fileID: 1598329656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1670611014
 GameObject:
   m_ObjectHideFlags: 0
@@ -6653,18 +6764,17 @@ MonoBehaviour:
     frameEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 799459018}
-          m_TargetAssemblyTypeName: MessageController, Assembly-CSharp
-          m_MethodName: DrawMessage
-          m_Mode: 5
+        - m_Target: {fileID: 1598329658}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\uB3D9\uD574\uBB3C\uACFC \uBC31\uB450\uC0B0\uC774
-              \uB9C8\uB974\uACE0 \uB2F3\uACE0\uB85D"
-            m_BoolArgument: 0
+            m_StringArgument: "\uC778\uD130\uB137\uC744 \uB04A\uC5C8\uC2B5\uB2C8\uB2E4."
+            m_BoolArgument: 1
           m_CallState: 2
   - delayTime: 5
     frameEvent:
@@ -6679,7 +6789,39 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\uD558\uB290\uB2D8\uC774 \uBCF4\uC6B0\uD558\uC0AC"
+            m_StringArgument: "\uC778\uD130\uB137\uC744 \uB04A\uC5C8\uC2B5\uB2C8\uB2E4."
+            m_BoolArgument: 0
+          m_CallState: 2
+  - delayTime: 4
+    frameEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1694150252}
+          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
+          m_MethodName: Fade
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: _Brightness
+            m_BoolArgument: 0
+          m_CallState: 2
+  - delayTime: 4
+    frameEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1694150252}
+          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
+          m_MethodName: MoveScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: StartScene
             m_BoolArgument: 0
           m_CallState: 2
   screenEffectController: {fileID: 0}
@@ -6895,7 +7037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 286}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748400138
@@ -6945,13 +7087,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 73.9
-  m_fontSizeBase: 73.9
+  m_fontSize: 122.4
+  m_fontSizeBase: 122.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7803,7 +7945,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1598329657}
   m_Father: {fileID: 1053417848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7824,7 +7967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7865,10 +8008,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4844289899296067751, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.699997
+      objectReference: {fileID: 0}
     - target: {fileID: 5331956918932720618, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 584792980}
+    - target: {fileID: 6078149231984758959, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.700001
+      objectReference: {fileID: 0}
     - target: {fileID: 6145568899687726204, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -7876,6 +8027,10 @@ PrefabInstance:
     - target: {fileID: 6145568899687726204, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254417872736017798, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 39.199997
       objectReference: {fileID: 0}
     - target: {fileID: 6653808090970819712, guid: 1581a0db4a79d3449b63e8ae47587239, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GoToEndingScene : MonoBehaviour
 {
     [SerializeField] private EndingType _endingType;
-
+    [SerializeField] private GameObject doorUI;
     private Interaction _interaction;
     private VolumeController _volumeController;
     private ScreenEffectController _screenEffectController;
@@ -28,11 +28,8 @@ public class GoToEndingScene : MonoBehaviour
                 case EndingType.Real:
                     _volumeController.SetRealEndingBounding(7, () =>
                     {
-                        _screenEffectController.Fade("_Brightness", 0, 3, () =>
-                        {
-                            _player.isCutScene = false;
-                            SceneManager.LoadScene("EndingScene_Real");
-                        });
+                        _player.isCutScene = false;
+                        SceneManager.LoadScene("EndingScene_Real");
                     });
                     break;
                 case EndingType.Internet:
