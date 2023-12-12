@@ -107,25 +107,27 @@ public class StageController : MonoSingleton<StageController>
         get => _currentStage;
         set
         {
-            if (stage[_currentStage].isChangeToRealWorld == true)
+            if (value == stage.Count)
             {
-                _screenEffectController.Fade("_Brightness", 0, 2, () =>
+                _gameManager.Player.isCutScene = true;
+                _screenEffectController.Fade("_Brightness", 0, 1, () =>
                 {
-                    _gameManager.Player.isCutScene = true;
-                    OnRealWorld = true;
-                    Destroy(_currentStageGameObject);
+                    _gameManager.Player.isCutScene = false;
+                    SceneManager.LoadScene("EndingScene_PlayerChoice");
                 });
             }
-            else if (_currentStage < value)
+            else
             {
-                if (_currentStage + 1 == stage.Count)
+                if (stage[_currentStage].isChangeToRealWorld == true)
                 {
-                    _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                    _screenEffectController.Fade("_Brightness", 0, 2, () =>
                     {
-                        SceneManager.LoadScene("EndingScene_PlayerChoice");
+                        _gameManager.Player.isCutScene = true;
+                        OnRealWorld = true;
+                        Destroy(_currentStageGameObject);
                     });
                 }
-                else
+                else if (_currentStage < value)
                 {
                     _screenEffectController.Fade("_Brightness", 0, 1, () =>
                     {
