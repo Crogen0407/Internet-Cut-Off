@@ -31,6 +31,10 @@ public class StageController : MonoSingleton<StageController>
         {
             _onRealWorld = value;
             realWorldStage.SetActive(_onRealWorld);
+            _screenEffectController.Fade("_Brightness", 0, 2, () =>
+            {
+                _gameManager.player.isCutScene = false;
+            });
             if (_onRealWorld == true)
             {
                 _volumeController.SetSaturation(_realworldCountIndex);
@@ -58,7 +62,11 @@ public class StageController : MonoSingleton<StageController>
 
     public void ResetStage(int value)
     {
-        _screenEffectController.Fade("_Brightness", 0, 1);
+        _gameManager.player.isCutScene = true;
+        _screenEffectController.Fade("_Brightness", 0, 1, () =>
+        {
+            _gameManager.player.isCutScene = false;
+        });
          if (_currentStageGameObject != null)
         {
             Destroy(_currentStageGameObject);
@@ -95,8 +103,12 @@ public class StageController : MonoSingleton<StageController>
         {
             if (stage[_currentStage].isChangeToRealWorld == true)
             {
-                Destroy(_currentStageGameObject);
-                OnRealWorld = true;
+                _screenEffectController.Fade("_Brightness", 0, 2, () =>
+                {
+                    _gameManager.player.isCutScene = true;
+                    OnRealWorld = true;
+                    Destroy(_currentStageGameObject);
+                });
             }
             else if (_currentStage < value)
             {
@@ -145,7 +157,6 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
-        Debug.Log("dkldk");
         ResetStage(0);
         OnRealWorld = false;
     }
