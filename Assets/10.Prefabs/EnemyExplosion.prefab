@@ -14807,7 +14807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4b4bd2a05d4377bb27146dc3184c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lifeTime: 10
+  _lifeTime: 1
   _bulletType: EnemyExplosion
 --- !u!198 &5390721786337547894
 ParticleSystem:

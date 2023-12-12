@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5f75d81af21954e908ebcfa6da8d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentStage: 3
+  _currentStage: 9
   _currentStageGameObject: {fileID: 0}
   realWorldStage: {fileID: 871111405}
   stage:
@@ -365,11 +365,11 @@ MonoBehaviour:
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 2003913716892461805, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
+  - stagePrefab: {fileID: 2003913716892461805, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
+  - stagePrefab: {fileID: 1918522777446496491, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
@@ -395,7 +395,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 8864560940600095571, guid: 0a3da432559fbdc4991d85629700326a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   sleepAtRealworld: 0
 --- !u!4 &345584398

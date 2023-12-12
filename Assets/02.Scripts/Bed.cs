@@ -18,9 +18,9 @@ public class Bed : MonoBehaviour
             if (_stageController.sleepAtRealworld == false)
             {
                 GameManager.Instance.Player.isCutScene = true;
-                _screenEffectController.Fade("_Brightness", 2, 3, () =>
+                _screenEffectController.Fade("_Brightness", 1, 1, () =>
                 {
-                    _screenEffectController.Fade("_Brightness", 3, 3, () =>
+                    _screenEffectController.Fade("_Brightness", 1, 1, () =>
                     {
                         GameManager.Instance.Player.isCutScene = false;
                         _stageController.sleepAtRealworld = true;
