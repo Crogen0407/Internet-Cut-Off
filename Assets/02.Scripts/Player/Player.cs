@@ -212,7 +212,7 @@ public class Player : MonoBehaviour
             animer.SetFloat("Run", 0);
             /*animer.SetBool("Idle", true);*/
             noRun = true;
-                print("fuckASShole");
+
         }
         else if(RaySist.collider == null)
         {

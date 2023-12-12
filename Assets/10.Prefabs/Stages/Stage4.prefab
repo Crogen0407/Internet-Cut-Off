@@ -5250,7 +5250,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBAA8\uB4E0 \uADE0\uC5F4\uC744 \uCC3E\uC544 \uD574\uACB0\uD558\uC2DC\uC624."
+  m_text: "\uC810\uD504\uC640 \uB300\uC26C\uB97C \uAC19\uC774\uD558\uC5EC \uB354
+    \uB192\uC774 \uB6F0\uC5B4\uBCF4\uC2DC\uC624.\n\uBAA8\uB4E0 \uADE0\uC5F4\uC744
+    \uCC3E\uC544 \uD574\uACB0\uD558\uC2DC\uC624."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 359b610295b35674495c0d7d2fa8c751, type: 2}
   m_sharedMaterial: {fileID: -1418690024258001551, guid: 359b610295b35674495c0d7d2fa8c751, type: 2}
@@ -5313,7 +5315,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -9.828726, y: 2.8734684, z: 18.526028, w: 0.66290474}
+  m_margin: {x: -13.170887, y: 2.8734684, z: 18.526028, w: 0.66290474}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
