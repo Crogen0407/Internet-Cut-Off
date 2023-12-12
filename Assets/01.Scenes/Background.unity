@@ -2673,14 +2673,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealWorld
       objectReference: {fileID: 0}
-    - target: {fileID: 4930201827438286720, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4930201827438286720, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
-      propertyPath: m_TagString
-      value: None
-      objectReference: {fileID: 0}
     - target: {fileID: 6508895622069113331, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2721,13 +2713,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8154739557124385396, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1024926674492618427, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc48bb4ba02df6342a073ffb7f02390b, type: 3}
