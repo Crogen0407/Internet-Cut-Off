@@ -359,7 +359,7 @@ MonoBehaviour:
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
@@ -367,7 +367,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 2003913716892461805, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
@@ -375,7 +375,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 9201081258793482902, guid: a17443ee6294d24429be814a4385d5db, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 1634689029607324788, guid: 62f41044021d76a4bb2d53414d394c7f, type: 3}
     switchTriggers: []
@@ -395,7 +395,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 8864560940600095571, guid: 0a3da432559fbdc4991d85629700326a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   sleepAtRealworld: 0
 --- !u!4 &345584398

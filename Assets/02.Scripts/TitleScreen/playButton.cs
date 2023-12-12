@@ -11,7 +11,16 @@ public class playButton : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartAnime());
+
         CanBtClick = true;
+        
+    }
+
+    IEnumerator StartAnime()
+    {
+        SceneEffect.color = new Color(0, 0, 0, 1);
+        yield return new WaitForSeconds(2);
         SceneEffect.color = new Color(0, 0, 0, 0);
     }
 
