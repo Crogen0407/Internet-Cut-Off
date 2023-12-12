@@ -44,7 +44,6 @@ public class Player_SangHoJakYong : MonoBehaviour
         {
             if (Input.GetKeyDown(interactionKeyCode))
             {
-                Debug.Log("인식");
                 RaySi.transform.GetComponent<Interaction>().action?.Invoke();
             }
             

@@ -14,9 +14,10 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpScale;
     [SerializeField] float dashTime;
     [SerializeField] float dashSpeed;
-    [FormerlySerializedAs("_unitMaterial")] public Material unitMaterial;
+    public Material unitMaterial;
     bool DDang= false;
     bool isDasing;
+    bool canDash = true;
     public sbyte Face =1; // 1 R, -1 L
     public bool isCutScene = false;
     public Vector3 developmentVelocity;
@@ -56,18 +57,21 @@ public class Player : MonoBehaviour
     {
         ri = GetComponent<Rigidbody2D>();
         animer = GetComponent<Animator>();
-        _stageController = GameManager.Instance.stageController;
-        _screenEffectController = GameManager.Instance.screenEffectController;
-        
-        _healthSystem.Damaged += () =>
+        _stageController = GameManager.Instance.StageController;
+        _screenEffectController = GameManager.Instance.ScreenEffectController;
+
+        if (_healthSystem != null)
         {
+            _healthSystem.Damaged += () =>
+            {
             
-        };
+            };
         
-        _healthSystem.Dead += () =>
-        {
-            StartCoroutine(OnNoiseCoroutine());
-        };
+            _healthSystem.Dead += () =>
+            {
+                StartCoroutine(OnNoiseCoroutine());
+            };
+        }
     }
 
     void Update()
@@ -124,13 +128,26 @@ public class Player : MonoBehaviour
 #region 점프관련
     private void JumpGamji()
     {
-        //Debug.DrawRay(ri.position, Vector3.down, new Color(0,1,0));
-        RaycastHit2D RaySir = Physics2D.Raycast(ri.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+        Debug.DrawRay(ri.position + new Vector2(0.2f, 0), Vector3.down, new Color(0,1,0));
+        Debug.DrawRay(ri.position + new Vector2(-0.2f, 0), Vector3.down, new Color(0, 1, 0));
+        RaycastHit2D RaySir = Physics2D.Raycast(ri.position+new Vector2(0.2f,0), Vector3.down, 1, LayerMask.GetMask("Platform"));
         if (ri.velocity.y < 0)
         {
             if (RaySir.collider != null)
             {
                 if (RaySir.distance < 1.0f)
+                {
+                    animer.SetBool("Jump", false);
+                    DDang = false;
+                }
+            }
+        }
+        RaycastHit2D RaySir2 = Physics2D.Raycast(ri.position + new Vector2(-0.2f, 0), Vector3.down, 1, LayerMask.GetMask("Platform"));
+        if (ri.velocity.y < 0)
+        {
+            if (RaySir2.collider != null)
+            {
+                if (RaySir2.distance < 1.0f)
                 {
                     animer.SetBool("Jump", false);
                     DDang = false;
@@ -153,19 +170,25 @@ public class Player : MonoBehaviour
 #region 대쉬
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.S) && isDasing == false)
+        if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true)
         {
             Sound_Dash();
             isDasing = true;
             animer.SetBool("Dash", true);
             ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
-            Invoke("EndDash", dashTime+0.2f);
+            Invoke("EndDash", dashTime);
         }
     }
     void EndDash()
     {
         isDasing = false;
+        canDash = false;
         animer.SetBool("Dash", false);
+        Invoke("AfterEndDash", 1f);
+    }
+    void AfterEndDash()
+    {
+        canDash = true;
     }
     #endregion
 

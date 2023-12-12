@@ -2,14 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class StageController : MonoSingleton<StageController>
 {
+    private int _realworldCountIndex = 0;
     [SerializeField] private int _currentStage;
     [SerializeField] private GameObject _currentStageGameObject;
-    private GameObject _realWorldStage;
+    public GameObject realWorldStage;
     [SerializeField] private List<StageData> stage;
     private bool _onRealWorld;
+    public bool sleepAtRealworld;
+    
     
     //Managemets
     private GameManager _gameManager;
@@ -17,6 +22,7 @@ public class StageController : MonoSingleton<StageController>
     //Controllers
     private CinemachineController _cinemachineController;
     private ScreenEffectController _screenEffectController;
+    private VolumeController _volumeController;
     
     public bool OnRealWorld
     {
@@ -24,34 +30,51 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             _onRealWorld = value;
-            _screenEffectController.SetScreenEffect("_BlackAndWhite", _onRealWorld);
-            _realWorldStage.SetActive(_onRealWorld);
-            _currentStageGameObject.SetActive(!_onRealWorld);
+            realWorldStage.SetActive(_onRealWorld);
+            _screenEffectController.Fade("_Brightness", 0, 2, () =>
+            {
+                _gameManager.Player.isCutScene = false;
+            });
+            if (_onRealWorld == true)
+            {
+                _volumeController.SetSaturation(_realworldCountIndex);
+                _gameManager.Player.transform.position = realWorldStage.transform.Find("SpawnPoint").position;
+                _realworldCountIndex -= 20;
+            }
+            else
+            {
+                _volumeController.SetSaturation(0);
+            }
         }
     }
     
     private void Awake()
     {
-        _realWorldStage = GameObject.Find("RealWorld");
     }
 
     private void Start()
     {
         _gameManager = GameManager.Instance;
-        _cinemachineController = _gameManager.cinemachineController;
-        _screenEffectController = _gameManager.screenEffectController;
+        _cinemachineController = _gameManager.CinemachineController;
+        _screenEffectController = _gameManager.ScreenEffectController;
+        _volumeController = _gameManager.VolumeController;
     }
 
     public void ResetStage(int value)
     {
-        _screenEffectController.Fade("_Brightness", 0, 1);
+        _gameManager.Player.isCutScene = true;
+        _screenEffectController.Fade("_Brightness", 0, 1, () =>
+        {
+            _gameManager.Player.isCutScene = false;
+        });
          if (_currentStageGameObject != null)
         {
             Destroy(_currentStageGameObject);
         }
 
+        OnRealWorld = false;
         _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
-        _gameManager.player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
+        _gameManager.Player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
         PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
         if (boundShape.isTrigger == false)
         {
@@ -66,7 +89,7 @@ public class StageController : MonoSingleton<StageController>
             stage[value].switchTriggers.Add(item);
             index++;
         }
-        _gameManager.player.unitMaterial.SetFloat("_Noise", 0);
+        _gameManager.Player.unitMaterial.SetFloat("_Noise", 0);
     }
 
     public void RestartStage()
@@ -80,28 +103,46 @@ public class StageController : MonoSingleton<StageController>
         {
             if (stage[_currentStage].isChangeToRealWorld == true)
             {
-                Destroy(_currentStageGameObject);
-                OnRealWorld = true;
+                _screenEffectController.Fade("_Brightness", 0, 2, () =>
+                {
+                    _gameManager.Player.isCutScene = true;
+                    OnRealWorld = true;
+                    Destroy(_currentStageGameObject);
+                });
             }
             else if (_currentStage < value)
             {
-                _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                if (_currentStage + 1 == stage.Count)
                 {
-                    ResetStage(value);
-                });
-
+                    _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                    {
+                        SceneManager.LoadScene("EndingScene_PlayerChoice");
+                    });
+                }
+                else
+                {
+                    _screenEffectController.Fade("_Brightness", 0, 1, () =>
+                    {
+                        ResetStage(value);
+                    });
+                }
             }
             _currentStage = value;
         }
     }
     
     [ContextMenu("GoToInternetWorld")]
-    private void GoToInternetWorld()
+    public void GoToInternetWorld()
     {
         if (_onRealWorld == true)
         {
-            _currentStageGameObject = Instantiate(stage[_currentStage].stagePrefab, Vector3.zero, Quaternion.identity);
-            OnRealWorld = false;
+            _screenEffectController.Fade("_Brightness", 0, 1, () =>
+            {
+                ResetStage(_currentStage);
+                _gameManager.Player.isCutScene = false;
+                OnRealWorld = false;
+            });
+            sleepAtRealworld = false;
         }
     }
     
@@ -116,8 +157,7 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
-        ResetStage(0);
-        OnRealWorld = false;
+        OnRealWorld = true;
     }
     
     /// <summary>

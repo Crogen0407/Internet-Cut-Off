@@ -953,7 +953,7 @@ SpriteRenderer:
   m_Size: {x: 16, y: 16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &605939486
@@ -8074,7 +8074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Knife: {fileID: 8551089389261462237, guid: 7c52d77837808594b8561ad4c790c082, type: 3}
-  SwingArea: {fileID: 2947649262259107527, guid: c51b2f6f2b1f7d44995c98f1235f06ba, type: 3}
   KnifePos: {fileID: 332206356}
   SwingPos: {fileID: 1428147257}
   S_Swing: {fileID: 5080052769354637992, guid: b0f64faeb5b7cbf489d9449e5b05f3f9, type: 3}
@@ -8106,11 +8105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e136362db8a5c6f46b071cdc717e2008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHP: 1
   PlayerSpeed: 2
   JumpScale: 0
   dashTime: 0
   dashSpeed: 0
+  unitMaterial: {fileID: -876546973899608171, guid: e8d80d31e789a0e468b43f066ef311bd, type: 3}
   Face: 1
   isCutScene: 0
   developmentVelocity: {x: 0, y: 0, z: 0}

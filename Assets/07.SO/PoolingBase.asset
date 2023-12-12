@@ -16,3 +16,6 @@ MonoBehaviour:
   - prefab: {fileID: 8512328122956378512, guid: 3a2934079ce51b04e967dceb6bb9349a, type: 3}
     prefabTypeName: EnemyBullet
     poolCount: 100
+  - prefab: {fileID: 8512328122956378512, guid: b36d0ac860f8c4844a1fe01a88cc2711, type: 3}
+    prefabTypeName: EnemyExplosion
+    poolCount: 20
