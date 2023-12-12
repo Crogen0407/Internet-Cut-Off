@@ -15,15 +15,25 @@ public class Bed : MonoBehaviour
         _interaction = GetComponent<Interaction>();
         _interaction.action += () =>
         {
-            GameManager.Instance.Player.isCutScene = true;
-            _screenEffectController.Fade("_Brightness", 2, 3, () =>
+            if (_stageController.sleepAtRealworld == false)
             {
-                _screenEffectController.Fade("_Brightness", 3, 3, () =>
+                GameManager.Instance.Player.isCutScene = true;
+                _screenEffectController.Fade("_Brightness", 2, 3, () =>
                 {
-                    GameManager.Instance.Player.isCutScene = false;
-                    _stageController.sleepAtRealworld = true;
+                    _screenEffectController.Fade("_Brightness", 3, 3, () =>
+                    {
+                        GameManager.Instance.Player.isCutScene = false;
+                        _stageController.sleepAtRealworld = true;
+                    });
                 });
-            });
+            }
+            else
+            {
+                GameManager.Instance.MessageController.DrawMessage("지금은 피곤하지 않다.", () =>
+                {
+                    GameManager.Instance.MessageController.DrawMessage(" ");
+                });
+            }
         };
     }
 }

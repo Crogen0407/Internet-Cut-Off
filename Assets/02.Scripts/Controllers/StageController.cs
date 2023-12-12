@@ -30,6 +30,7 @@ public class StageController : MonoSingleton<StageController>
         set
         {
             _onRealWorld = value;
+            _gameManager.Player.isCutScene = true;
             realWorldStage.SetActive(_onRealWorld);
             _screenEffectController.Fade("_Brightness", 0, 2, () =>
             {
