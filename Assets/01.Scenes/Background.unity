@@ -359,23 +359,23 @@ MonoBehaviour:
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 2003913716892461805, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
+  - stagePrefab: {fileID: 2003913716892461805, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 1918522777446496491, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
+  - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 1634689029607324788, guid: 62f41044021d76a4bb2d53414d394c7f, type: 3}
     switchTriggers: []
@@ -395,7 +395,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 8864560940600095571, guid: 0a3da432559fbdc4991d85629700326a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   sleepAtRealworld: 0
 --- !u!4 &345584398
@@ -1532,6 +1532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1271601877}
+  - component: {fileID: 1271601878}
   - component: {fileID: 1271601876}
   - component: {fileID: 1271601875}
   - component: {fileID: 1271601874}
@@ -1539,7 +1540,6 @@ GameObject:
   - component: {fileID: 1271601872}
   - component: {fileID: 1271601871}
   - component: {fileID: 1271601870}
-  - component: {fileID: 1271601878}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeed: 10
   JumpScale: 20
-  dashTime: 0.1
+  dashTime: 0.2
   dashSpeed: 15
   unitMaterial: {fileID: 2100000, guid: ba135a98fc166914689618b600b852cd, type: 2}
   Face: 1
