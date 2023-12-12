@@ -945,15 +945,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0da3b05d8eef8294e9f5ea9a522edbd5, type: 3}
+  m_Sprite: {fileID: 283244021, guid: 0da3b05d8eef8294e9f5ea9a522edbd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16, y: 16}
+  m_Size: {x: 1.25, y: 1.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &605939486
@@ -1198,7 +1198,7 @@ Animator:
   m_GameObject: {fileID: 804669773}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cd174d045545014e8338d374e5f3028, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3401,71 +3401,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1285562154}
-    m_ColliderPaths:
-    - - X: 110000000
-        Y: 40000000
-      - X: 120000000
-        Y: 40000000
-      - X: 120000000
-        Y: 50000000
-      - X: 10312500
-        Y: 50000000
-      - X: 10000000
-        Y: 49687500
-      - X: 10000000
-        Y: -30000000
-      - X: -130000000
-        Y: -30000000
-      - X: -130000000
-        Y: -50000000
-      - X: 0
-        Y: -50000000
-      - X: 0
-        Y: -60000000
-      - X: 10000000
-        Y: -60000000
-      - X: 10000000
-        Y: -70000000
-      - X: 0
-        Y: -70000000
-      - X: 0
-        Y: -80000000
-      - X: 10000000
-        Y: -80000000
-      - X: 10000000
-        Y: -90000000
-      - X: 110000000
-        Y: -90000000
-    - - X: 10000000
-        Y: -60000000
-      - X: 10000000
-        Y: -40000000
-      - X: 60000000
-        Y: -40000000
-      - X: 60000000
-        Y: -50000000
-      - X: 70000000
-        Y: -50000000
-      - X: 70000000
-        Y: -60000000
-      - X: 30000000
-        Y: -60000000
-      - X: 30000000
-        Y: -50000000
-      - X: 20000000
-        Y: -50000000
-      - X: 20000000
-        Y: -60000000
-    - - X: 90000000
-        Y: -50000000
-      - X: 90000000
-        Y: -40000000
-      - X: 100000000
-        Y: -40000000
-      - X: 100000000
-        Y: -50000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 10.99997, y: -9}
@@ -3545,7 +3481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1292224094
 Transform:
   m_ObjectHideFlags: 0
@@ -7025,6 +6961,18 @@ MonoBehaviour:
             m_StringArgument: _LatterboxCurrentSize
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1694150252}
+          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
+          m_MethodName: ChangeState
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Die
+            m_BoolArgument: 0
+          m_CallState: 2
   - delayTime: 3
     frameEvent:
       m_PersistentCalls:
@@ -7353,6 +7301,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - delayTime: 4
+    frameEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1694150252}
+          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
+          m_MethodName: MoveScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 8
+            m_StringArgument: StartScene
+            m_BoolArgument: 0
+          m_CallState: 2
   screenEffectController: {fileID: 0}
   soundController: {fileID: 0}
   cutSceneController: {fileID: 0}
@@ -7433,6 +7397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c7e0f5220ab4d40a2fa7238184eb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 804669778}
 --- !u!4 &1694150253
 Transform:
   m_ObjectHideFlags: 0

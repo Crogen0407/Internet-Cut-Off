@@ -8,6 +8,8 @@ public class CutSceneController : MonoBehaviour
 {
     private RectTransform latterbox_up;
     private RectTransform latterbox_bottom;
+
+    [SerializeField] private Animator _animator;
     
     //Managements
     private TimelineManager _timelineManager;
@@ -62,9 +64,15 @@ public class CutSceneController : MonoBehaviour
             {
                 scaleVec = new Vector3(1, 1 - percentTime, 1);
                 latterbox_up.localScale = scaleVec;
-                latterbox_bottom.localScale = scaleVec;            }
+                latterbox_bottom.localScale = scaleVec;
+            }
             yield return null;
         }
+    }
+
+    public void ChangeState(string name)
+    {
+        _animator.SetBool(name, true);
     }
     public void BrightnessFade(float duration)
     {
