@@ -395,9 +395,10 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 8864560940600095571, guid: 0a3da432559fbdc4991d85629700326a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   sleepAtRealworld: 0
+  monsterIndex: 0
 --- !u!4 &345584398
 Transform:
   m_ObjectHideFlags: 0
