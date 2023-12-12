@@ -157,8 +157,7 @@ public class StageController : MonoSingleton<StageController>
     
     public void StartFirstStage()
     {
-        ResetStage(0);
-        OnRealWorld = false;
+        OnRealWorld = true;
     }
     
     /// <summary>
