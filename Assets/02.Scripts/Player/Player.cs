@@ -170,7 +170,7 @@ public class Player : MonoBehaviour
 #region ´ë½¬
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true)
+        if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true && _stageController.OnRealWorld == false)
         {
             Sound_Dash();
             isDasing = true;

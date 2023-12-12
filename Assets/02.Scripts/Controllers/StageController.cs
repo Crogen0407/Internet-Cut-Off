@@ -41,10 +41,12 @@ public class StageController : MonoSingleton<StageController>
                 _gameManager.Player.transform.position = realWorldStage.transform.Find("SpawnPoint").position;
                 _cinemachineController.SetCinemachineConfinerBoundingShape(realWorldStage.transform.Find("BoundShape").GetComponent<PolygonCollider2D>());
                 _realworldCountIndex -= 20;
+               _gameManager.Player.transform.Find("w").gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
             }
             else
             {
                 _volumeController.SetSaturation(0);
+                _gameManager.Player.transform.Find("w").gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
     }
