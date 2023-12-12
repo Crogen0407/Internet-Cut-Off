@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1635533337994291864}
   - component: {fileID: 3875062845007230841}
   - component: {fileID: 7273246246434260290}
-  - component: {fileID: 1574269358406412}
   - component: {fileID: 4539960440389893376}
+  - component: {fileID: 4482493035473036126}
   m_Layer: 8
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1109386695, guid: 8f6cc4dcb25e32649a625fe6f50d7d69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,8 +114,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1574269358406412
-CircleCollider2D:
+--- !u!114 &4539960440389893376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8512328122956378512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4b4bd2a05d4377bb27146dc3184c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeTime: 10
+  _bulletType: EnemyBullet
+--- !u!70 &4482493035473036126
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,20 +160,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &4539960440389893376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8512328122956378512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4b4bd2a05d4377bb27146dc3184c03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lifeTime: 10
-  _bulletType: EnemyBullet
+  m_Offset: {x: -0.28189945, y: 0.035009332}
+  m_Size: {x: 0.97156435, y: 0.34152514}
+  m_Direction: 1
