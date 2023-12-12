@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     bool DDang= false;
     bool isDasing;
     bool canDash = true;
+    bool noRun = false;
     public sbyte Face =1; // 1 R, -1 L
     public bool isCutScene = false;
     public Vector3 developmentVelocity;
@@ -76,7 +77,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        animer.SetFloat("Run", Mathf.Abs(ri.velocity.x));
+        WallTamji();
+        if (noRun == false)
+        {
+            animer.SetFloat("Run", Mathf.Abs(ri.velocity.x));
+        }
         Move();
         if (isCutScene == false)
         {
@@ -85,6 +90,7 @@ public class Player : MonoBehaviour
             Dash();
         }
         SetFace();
+        
     }
 
 #region 움직임
@@ -189,6 +195,29 @@ public class Player : MonoBehaviour
     void AfterEndDash()
     {
         canDash = true;
+    }
+    #endregion
+
+#region 감지
+    void WallTamji()
+    {
+        RaycastHit2D RaySist = Physics2D.Raycast(ri.position + new Vector2(0, -0.5f), Vector3.right * Face, 1f, LayerMask.GetMask("Platform"));
+        Debug.DrawRay(ri.position + new Vector2(0, -0.5f), Vector3.right * Face, new Color(0, 0.4f, 0));
+        if (RaySist.collider != null)
+        {
+                animer.SetBool("Jump", false);
+                animer.SetBool("Dash", false);
+                animer.SetBool("Attack", false);
+            animer.SetFloat("Run", 0);
+            /*animer.SetBool("Idle", true);*/
+            noRun = true;
+                print("fuckASShole");
+        }
+        else if(RaySist.collider == null)
+        {
+            noRun = false;
+            //print("sibal");
+        }
     }
     #endregion
 
