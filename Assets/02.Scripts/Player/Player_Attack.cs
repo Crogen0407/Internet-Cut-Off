@@ -8,6 +8,8 @@ public class Player_Attack : MonoBehaviour
     bool canSwing = true;
     bool canThrow = true;
 
+    private StageController _stageController;
+    
     [Header("오브젝트")]
     [SerializeField] GameObject Knife;
     /*[SerializeField] GameObject SwingArea;//근접공격범위오브젝트, 콜라이더다.*/
@@ -28,6 +30,7 @@ public class Player_Attack : MonoBehaviour
     void Start()
     { 
         animer = GetComponent<Animator>();
+        _stageController = GameManager.Instance.StageController;
     }
 
     void Update()
@@ -40,11 +43,11 @@ public class Player_Attack : MonoBehaviour
 
     void InputSys()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) && _stageController.OnRealWorld == false)
         {
             KnifeAttack();
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && _stageController.OnRealWorld == false)
         {
             ThrowAttack();
         }
