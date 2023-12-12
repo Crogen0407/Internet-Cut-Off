@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  _enemyInfoData: {fileID: 11400000, guid: 6f70501813835c641b42a064a700ad34, type: 2}
+  enemyInfoData: {fileID: 0}
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db9ef1739d120b4396ee674d42db07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 15
+  _hp: 20
 --- !u!114 &139456918000914883
 MonoBehaviour:
   m_ObjectHideFlags: 0
