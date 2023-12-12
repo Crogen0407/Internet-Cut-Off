@@ -353,29 +353,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5f75d81af21954e908ebcfa6da8d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentStage: 0
+  _currentStage: 3
   _currentStageGameObject: {fileID: 0}
   realWorldStage: {fileID: 871111405}
   stage:
   - stagePrefab: {fileID: 5118431401265936034, guid: 61b824c70b278ae48808fbfc8d40ee92, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 1
+    isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 497797832053237072, guid: d15da12aeda24a04c8d30e026bf9c739, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 2003913716892461805, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
+  - stagePrefab: {fileID: 2003913716892461805, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
-  - stagePrefab: {fileID: 1918522777446496491, guid: d47a47113276b744cabaaf3a55afd608, type: 3}
+  - stagePrefab: {fileID: 1918522777446496491, guid: 10c6b68c2e2417f4797ad1177ad2411a, type: 3}
     switchTriggers: []
     isChangeToRealWorld: 0
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 9201081258793482902, guid: a17443ee6294d24429be814a4385d5db, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 1634689029607324788, guid: 62f41044021d76a4bb2d53414d394c7f, type: 3}
     switchTriggers: []
@@ -395,7 +395,7 @@ MonoBehaviour:
     playerSpawnPosition: {x: 0, y: 0}
   - stagePrefab: {fileID: 8864560940600095571, guid: 0a3da432559fbdc4991d85629700326a, type: 3}
     switchTriggers: []
-    isChangeToRealWorld: 0
+    isChangeToRealWorld: 1
     playerSpawnPosition: {x: 0, y: 0}
   sleepAtRealworld: 0
 --- !u!4 &345584398
@@ -858,7 +858,7 @@ Transform:
   m_GameObject: {fileID: 670808333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 1.3, z: 0}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1879,8 +1879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342440904}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.26, y: 2.13, z: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
