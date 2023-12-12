@@ -26,11 +26,14 @@ public class GoToEndingScene : MonoBehaviour
             switch (_endingType)
             {
                 case EndingType.Real:
-                    _volumeController.SetRealEndingBounding(7, () =>
+                    if (StageController.Instance.monsterIndex == 0)
                     {
-                        _player.isCutScene = false;
-                        SceneManager.LoadScene("EndingScene_Real");
-                    });
+                        _volumeController.SetRealEndingBounding(7, () =>
+                        {
+                            _player.isCutScene = false;
+                            SceneManager.LoadScene("EndingScene_Real");
+                        });
+                    }
                     break;
                 case EndingType.Internet:
                     _screenEffectController.Fade("_Brightness", 0, 3, () =>

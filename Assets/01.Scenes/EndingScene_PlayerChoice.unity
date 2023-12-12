@@ -1917,6 +1917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c7e0f5220ab4d40a2fa7238184eb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
 --- !u!4 &1694150253
 Transform:
   m_ObjectHideFlags: 0
@@ -2152,8 +2153,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.05610001, y: -0.5753, z: 0}
-    m_Extent: {x: 2.2189002, y: 1.5792999, z: 0}
+    m_Center: {x: 0.057500005, y: -0.5717, z: 0}
+    m_Extent: {x: 2.2231998, y: 1.5798, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

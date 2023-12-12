@@ -10,7 +10,6 @@ public class TimelineManager : MonoSingleton<TimelineManager>
     public EndingType endingType;
     public List<TimeLineFrame> timeline;
     public int TimeLineIndexer { get; private set; }
-
     
     //Controllers
     [HideInInspector] public ScreenEffectController screenEffectController;

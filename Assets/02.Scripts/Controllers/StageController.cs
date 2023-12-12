@@ -14,7 +14,8 @@ public class StageController : MonoSingleton<StageController>
     [SerializeField] private List<StageData> stage;
     private bool _onRealWorld;
     public bool sleepAtRealworld;
-    
+    public int monsterIndex = 0;
+
     
     //Managemets
     private GameManager _gameManager;

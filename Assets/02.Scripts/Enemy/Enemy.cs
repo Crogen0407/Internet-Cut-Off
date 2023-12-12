@@ -70,6 +70,10 @@ public class Enemy : MonoBehaviour
         };
         healthSystem.Dead += () =>
         {
+            if (GameManager.Instance.StageController.CurrentStage > 4)
+            {
+                GameManager.Instance.StageController.monsterIndex++;
+            }
             //나중에 오브젝트 풀링으로 바꾸기
             if (Interaction != null)
             {
