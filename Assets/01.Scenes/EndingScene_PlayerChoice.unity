@@ -825,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 3629552980318563353}
   m_Damping: 0.5
   m_MaxWindowSize: -1
 --- !u!114 &478781861
@@ -2153,8 +2153,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.057500005, y: -0.5717, z: 0}
-    m_Extent: {x: 2.2231998, y: 1.5798, z: 0}
+    m_Center: {x: 0.05375004, y: -0.5698, z: 0}
+    m_Extent: {x: 2.22645, y: 1.574, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2200,7 +2200,7 @@ Transform:
   m_GameObject: {fileID: 1826590465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 0.8699999, z: -1.5699997}
+  m_LocalPosition: {x: 5.099982, y: 0.09999001, z: -1.5699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
