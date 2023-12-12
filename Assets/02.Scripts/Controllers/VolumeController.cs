@@ -51,7 +51,7 @@ public class VolumeController : MonoBehaviour
         {
             currentTime += Time.deltaTime;
             percentTime = currentTime / duration;
-            _bloom.intensity.value = Mathf.Lerp(currentBloom, 50000, easeInCubic(percentTime));
+            _bloom.intensity.value = Mathf.Lerp(currentBloom, 80000, easeInCubic(percentTime));
             yield return null;
         }
 

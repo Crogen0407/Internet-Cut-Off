@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] GameObject S_move;
 
-    private void Awake()
+    private void Start()
     {
         _enemy = GetComponent<Enemy>();
         _rigidbody = GetComponent<Rigidbody2D>();

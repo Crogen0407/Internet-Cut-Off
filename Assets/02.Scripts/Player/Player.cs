@@ -59,16 +59,19 @@ public class Player : MonoBehaviour
         animer = GetComponent<Animator>();
         _stageController = GameManager.Instance.stageController;
         _screenEffectController = GameManager.Instance.screenEffectController;
-        
-        _healthSystem.Damaged += () =>
+
+        if (_healthSystem != null)
         {
+            _healthSystem.Damaged += () =>
+            {
             
-        };
+            };
         
-        _healthSystem.Dead += () =>
-        {
-            StartCoroutine(OnNoiseCoroutine());
-        };
+            _healthSystem.Dead += () =>
+            {
+                StartCoroutine(OnNoiseCoroutine());
+            };
+        }
     }
 
     void Update()

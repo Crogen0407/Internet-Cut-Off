@@ -29,9 +29,16 @@ public class EnemyAttack : MonoBehaviour
         _enemy.enemyAnimation.SetAnimationState("Attack", true);
         yield return new WaitForSeconds(0.3f);
 
-        
-        Rigidbody2D bullet = _enemy.poolManager.Pop("EnemyBullet", transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
-        bullet.AddForce(attackDirection * 10, ForceMode2D.Impulse);
+        if (_enemy.enemyInfoData.enemyType != EnemyType.Red)
+        {
+            Rigidbody2D bullet = _enemy.poolManager.Pop("EnemyBullet", transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+            bullet.AddForce(attackDirection * 10, ForceMode2D.Impulse);
+        }
+        else
+        {
+            _enemy.poolManager.Pop("EnemyExplosion", transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
         Sound_shot();
         yield return new WaitForSeconds(0.5f);
 
@@ -41,16 +48,16 @@ public class EnemyAttack : MonoBehaviour
 
     void Sound_attack()
     {
-        //¿øº»ÇÁ¸®Æé ÆÄ±« ¹æÁö¸¦ À§ÇÑ º¹»ç
+        //ì›ë³¸í”„ë¦¬í© íŒŒê´´ ë°©ì§€ë¥¼ ìœ„í•œ ë³µì‚¬
         var copy = Instantiate(S_attack, this.transform.position, this.transform.rotation);
-        //¿øº» ÇÁ¸®Æé ÆÄ±«°¡ ¾Æ´Ñ, º¹»çµÈ ¿ÀºêÁ§Æ® ÆÄ±«
+        //ì›ë³¸ í”„ë¦¬í© íŒŒê´´ê°€ ì•„ë‹Œ, ë³µì‚¬ëœ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
         Destroy(copy, 0.5f);
     }
     void Sound_shot()
     {
-        //¿øº»ÇÁ¸®Æé ÆÄ±« ¹æÁö¸¦ À§ÇÑ º¹»ç
+        //ì›ë³¸í”„ë¦¬í© íŒŒê´´ ë°©ì§€ë¥¼ ìœ„í•œ ë³µì‚¬
         var copy = Instantiate(S_shot, this.transform.position, this.transform.rotation);
-        //¿øº» ÇÁ¸®Æé ÆÄ±«°¡ ¾Æ´Ñ, º¹»çµÈ ¿ÀºêÁ§Æ® ÆÄ±«
+        //ì›ë³¸ í”„ë¦¬í© íŒŒê´´ê°€ ì•„ë‹Œ, ë³µì‚¬ëœ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
         Destroy(copy, 0.5f);
     }
 }
