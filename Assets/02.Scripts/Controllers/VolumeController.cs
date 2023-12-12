@@ -15,7 +15,7 @@ public class VolumeController : MonoBehaviour
     {
         try
         {
-            _realWorldVolume = FindObjectOfType<GameManager>().stageController.realWorldStage.transform.Find("Global Volume")
+            _realWorldVolume = FindObjectOfType<GameManager>().StageController.realWorldStage.transform.Find("Global Volume")
                 .GetComponent<Volume>();
         }
         catch (NullReferenceException e)

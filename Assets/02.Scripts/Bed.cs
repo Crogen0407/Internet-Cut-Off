@@ -10,17 +10,17 @@ public class Bed : MonoBehaviour
     
     private void Start()
     {
-        _screenEffectController = GameManager.Instance.screenEffectController;
-        _stageController = GameManager.Instance.stageController;
+        _screenEffectController = GameManager.Instance.ScreenEffectController;
+        _stageController = GameManager.Instance.StageController;
         _interaction = GetComponent<Interaction>();
         _interaction.action += () =>
         {
-            GameManager.Instance.player.isCutScene = true;
+            GameManager.Instance.Player.isCutScene = true;
             _screenEffectController.Fade("_Brightness", 2, 3, () =>
             {
                 _screenEffectController.Fade("_Brightness", 3, 3, () =>
                 {
-                    GameManager.Instance.player.isCutScene = false;
+                    GameManager.Instance.Player.isCutScene = false;
                     _stageController.sleepAtRealworld = true;
                 });
             });

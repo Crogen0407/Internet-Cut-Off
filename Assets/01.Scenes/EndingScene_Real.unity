@@ -1039,6 +1039,50 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: f77b3ac7faac2d8488717bfdd64ea128, type: 2}
+--- !u!1 &799459017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799459019}
+  - component: {fileID: 799459018}
+  m_Layer: 0
+  m_Name: MessageController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &799459018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799459017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f77cc94c2d702458f874c9209fc16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &799459019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799459017}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &804669773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1538,8 @@ RectTransform:
   - {fileID: 1585915042}
   - {fileID: 369992572}
   - {fileID: 471438825}
+  - {fileID: 2122257472}
+  - {fileID: 1748400137}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6603,668 +6649,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endingType: 1
   timeline:
-  - delayTime: 0
+  - delayTime: 5
     frameEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2065516887}
-          m_TargetAssemblyTypeName: Player, Assembly-CSharp
-          m_MethodName: SetPlayerCutSceneMode
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 8
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-  - delayTime: 4
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 8
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: BrightnessFade
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _Brightness
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 2
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: LatterboxFade
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 3
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetPlayerFace
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: -1
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetPlayerFace
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 1
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetPlayerFace
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: -1
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetPlayerFace
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 1
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 3
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 5.3
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 4
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: BrightnessFade
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 2.1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 799459018}
+          m_TargetAssemblyTypeName: MessageController, Assembly-CSharp
+          m_MethodName: DrawMessage
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: BrightnessFade
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 2
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetPlayerPosition
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1675533778}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 2
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 3
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 0.7
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 4
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 0.28
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: PlayerMove
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
+            m_StringArgument: "\uB3D9\uD574\uBB3C\uACFC \uBC31\uB450\uC0B0\uC774
+              \uB9C8\uB974\uACE0 \uB2F3\uACE0\uB85D"
             m_BoolArgument: 0
           m_CallState: 2
   - delayTime: 5
     frameEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2065516885}
-          m_TargetAssemblyTypeName: Player_Attack, Assembly-CSharp
-          m_MethodName: KnifeAttack
-          m_Mode: 1
+        - m_Target: {fileID: 799459018}
+          m_TargetAssemblyTypeName: MessageController, Assembly-CSharp
+          m_MethodName: DrawMessage
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 3
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-  - delayTime: 0.1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 0.2
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-  - delayTime: 0.2
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 1
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-  - delayTime: 4
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1292224093}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 605939486}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 413228237}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: SetBlackAndWhite
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: _LatterboxCurrentSize
-            m_BoolArgument: 0
-          m_CallState: 2
-  - delayTime: 4
-    frameEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1694150252}
-          m_TargetAssemblyTypeName: CutSceneController, Assembly-CSharp
-          m_MethodName: BrightnessFade
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 8
-            m_StringArgument: 
+            m_StringArgument: "\uD558\uB290\uB2D8\uC774 \uBCF4\uC6B0\uD558\uC0AC"
             m_BoolArgument: 0
           m_CallState: 2
   screenEffectController: {fileID: 0}
@@ -7446,6 +6861,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1748400136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748400137}
+  - component: {fileID: 1748400139}
+  - component: {fileID: 1748400138}
+  m_Layer: 5
+  m_Name: MessageText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1748400137
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748400136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1053417848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1748400138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748400136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 359b610295b35674495c0d7d2fa8c751, type: 2}
+  m_sharedMaterial: {fileID: -1418690024258001551, guid: 359b610295b35674495c0d7d2fa8c751, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 73.9
+  m_fontSizeBase: 73.9
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1748400139
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748400136}
+  m_CullTransparentMesh: 1
 --- !u!1 &1761598769
 GameObject:
   m_ObjectHideFlags: 0
@@ -8225,6 +7774,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2122257471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122257472}
+  - component: {fileID: 2122257474}
+  - component: {fileID: 2122257473}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2122257472
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122257471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1053417848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2122257473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122257471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2122257474
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122257471}
+  m_CullTransparentMesh: 1
 --- !u!1001 &8133450867762506248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8370,6 +7994,7 @@ SceneRoots:
   - {fileID: 1438341474}
   - {fileID: 1670611016}
   - {fileID: 584792981}
+  - {fileID: 799459019}
   - {fileID: 829076954}
   - {fileID: 972585853}
   - {fileID: 1557227064}

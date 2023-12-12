@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
     {
         ri = GetComponent<Rigidbody2D>();
         animer = GetComponent<Animator>();
-        _stageController = GameManager.Instance.stageController;
-        _screenEffectController = GameManager.Instance.screenEffectController;
+        _stageController = GameManager.Instance.StageController;
+        _screenEffectController = GameManager.Instance.ScreenEffectController;
 
         if (_healthSystem != null)
         {

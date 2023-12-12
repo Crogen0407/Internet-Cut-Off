@@ -21,7 +21,7 @@ public class SwitchTrigger : MonoBehaviour
         _interaction.action += () =>
         {
             switchOperation = true;
-            GameManager.Instance.stageController.CheckSwitch();
+            GameManager.Instance.StageController.CheckSwitch();
             gameObject.SetActive(false);
         };
     }

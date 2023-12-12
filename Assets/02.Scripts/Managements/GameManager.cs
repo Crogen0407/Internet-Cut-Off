@@ -6,27 +6,29 @@ using UnityEngine.Serialization;
 public class GameManager : MonoSingleton<GameManager>
 {
     //Controller
-    [HideInInspector] public StageController stageController;
-    [HideInInspector] public CinemachineController cinemachineController;
-    [HideInInspector] public ScreenEffectController screenEffectController;
-    [HideInInspector] public VolumeController volumeController;
-    [HideInInspector] public Player player;
+    public StageController StageController { get; private set; }
+    public CinemachineController CinemachineController { get; private set; }
+    public ScreenEffectController ScreenEffectController { get; private set; }
+    public VolumeController VolumeController { get; private set; }
+    public MessageController MessageController { get; private set; }
+    public Player Player { get; private set; }
     
     private void Awake()
     {
-        stageController = FindObjectOfType<StageController>();
-        cinemachineController = FindObjectOfType<CinemachineController>();
-        screenEffectController = FindObjectOfType<ScreenEffectController>();
-        volumeController = FindObjectOfType<VolumeController>();
+        StageController = FindObjectOfType<StageController>();
+        CinemachineController = FindObjectOfType<CinemachineController>();
+        ScreenEffectController = FindObjectOfType<ScreenEffectController>();
+        VolumeController = FindObjectOfType<VolumeController>();
+        MessageController = FindObjectOfType<MessageController>();
         
-        player = FindObjectOfType<Player>();
+        Player = FindObjectOfType<Player>();
     }
 
     private void Start()
     {
-        if (stageController != null)
+        if (StageController != null)
         {
-            stageController.StartFirstStage();
+            StageController.StartFirstStage();
         }
     }
 

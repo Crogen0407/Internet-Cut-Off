@@ -33,12 +33,12 @@ public class StageController : MonoSingleton<StageController>
             realWorldStage.SetActive(_onRealWorld);
             _screenEffectController.Fade("_Brightness", 0, 2, () =>
             {
-                _gameManager.player.isCutScene = false;
+                _gameManager.Player.isCutScene = false;
             });
             if (_onRealWorld == true)
             {
                 _volumeController.SetSaturation(_realworldCountIndex);
-                _gameManager.player.transform.position = realWorldStage.transform.Find("SpawnPoint").position;
+                _gameManager.Player.transform.position = realWorldStage.transform.Find("SpawnPoint").position;
                 _realworldCountIndex -= 20;
             }
             else
@@ -55,17 +55,17 @@ public class StageController : MonoSingleton<StageController>
     private void Start()
     {
         _gameManager = GameManager.Instance;
-        _cinemachineController = _gameManager.cinemachineController;
-        _screenEffectController = _gameManager.screenEffectController;
-        _volumeController = _gameManager.volumeController;
+        _cinemachineController = _gameManager.CinemachineController;
+        _screenEffectController = _gameManager.ScreenEffectController;
+        _volumeController = _gameManager.VolumeController;
     }
 
     public void ResetStage(int value)
     {
-        _gameManager.player.isCutScene = true;
+        _gameManager.Player.isCutScene = true;
         _screenEffectController.Fade("_Brightness", 0, 1, () =>
         {
-            _gameManager.player.isCutScene = false;
+            _gameManager.Player.isCutScene = false;
         });
          if (_currentStageGameObject != null)
         {
@@ -74,7 +74,7 @@ public class StageController : MonoSingleton<StageController>
 
         OnRealWorld = false;
         _currentStageGameObject = Instantiate(stage[value].stagePrefab, Vector3.zero, Quaternion.identity);
-        _gameManager.player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
+        _gameManager.Player.transform.position = _currentStageGameObject.transform.Find("SpawnPoint").position;
         PolygonCollider2D boundShape = _currentStageGameObject.transform.Find("BoundShape").GetComponent<PolygonCollider2D>();
         if (boundShape.isTrigger == false)
         {
@@ -89,7 +89,7 @@ public class StageController : MonoSingleton<StageController>
             stage[value].switchTriggers.Add(item);
             index++;
         }
-        _gameManager.player.unitMaterial.SetFloat("_Noise", 0);
+        _gameManager.Player.unitMaterial.SetFloat("_Noise", 0);
     }
 
     public void RestartStage()
@@ -105,7 +105,7 @@ public class StageController : MonoSingleton<StageController>
             {
                 _screenEffectController.Fade("_Brightness", 0, 2, () =>
                 {
-                    _gameManager.player.isCutScene = true;
+                    _gameManager.Player.isCutScene = true;
                     OnRealWorld = true;
                     Destroy(_currentStageGameObject);
                 });
@@ -139,7 +139,7 @@ public class StageController : MonoSingleton<StageController>
             _screenEffectController.Fade("_Brightness", 0, 1, () =>
             {
                 ResetStage(_currentStage);
-                _gameManager.player.isCutScene = false;
+                _gameManager.Player.isCutScene = false;
                 OnRealWorld = false;
             });
             sleepAtRealworld = false;
