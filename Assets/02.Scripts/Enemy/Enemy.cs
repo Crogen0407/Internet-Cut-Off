@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     
     //Components
     [HideInInspector]public HealthSystem healthSystem;
-    
+    public SwitchTrigger SwitchTrigger { get; private set; }
     [HideInInspector]public EnemyAttack enemyAttack;
     [HideInInspector]public EnemyMovement enemyMovement;
     [HideInInspector]public EnemyAnimation enemyAnimation;
@@ -36,7 +36,14 @@ public class Enemy : MonoBehaviour
         enemyAttack = GetComponent<EnemyAttack>();
         enemyMovement = GetComponent<EnemyMovement>();
         enemyAnimation = visualTransform.GetComponent<EnemyAnimation>();
-
+        try
+        {
+            SwitchTrigger = GetComponent<SwitchTrigger>();
+        }
+        catch (NullReferenceException e)
+        {
+            
+        }
         _spriteRenderer = visualTransform.GetComponent<SpriteRenderer>();
     }
     
@@ -64,6 +71,10 @@ public class Enemy : MonoBehaviour
         healthSystem.Dead += () =>
         {
             //나중에 오브젝트 풀링으로 바꾸기
+            if (SwitchTrigger != null)
+            {
+                SwitchTrigger.switchOperation = true;
+            }
             Destroy(gameObject);
         };
     }
