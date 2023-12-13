@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.Tweening;
 
 public class Player : MonoBehaviour
 {
     [Header("대충암거나처넣기")]
-    Rigidbody2D ri;
+    Rigidbody2D _rigidbody;
     Animator animer;
 
     [Header("플레이어 기본셋팅")]
@@ -57,7 +58,7 @@ public class Player : MonoBehaviour
     
     void Start()
     {
-        ri = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
         animer = GetComponent<Animator>();
         _stageController = GameManager.Instance.StageController;
         _screenEffectController = GameManager.Instance.ScreenEffectController;
@@ -81,7 +82,7 @@ public class Player : MonoBehaviour
         WallTamji();
         if (noRun == false)
         {
-            animer.SetFloat("Run", Mathf.Abs(ri.velocity.x));
+            animer.SetFloat("Run", Mathf.Abs(_rigidbody.velocity.x));
         }
         Move();
         if (isCutScene == false)
@@ -101,12 +102,12 @@ public class Player : MonoBehaviour
         if (isDasing == false) 
         { 
             Vector3 vel = new Vector3(1,0,0) * (isCutScene == false ? (Input.GetAxisRaw("Horizontal")) : 0) * PlayerSpeed * 1;
-            vel.y = ri.velocity.y;
+            vel.y = _rigidbody.velocity.y;
             vel += developmentVelocity;
-            ri.velocity = vel; 
+            _rigidbody.velocity = vel; 
         }
         //Face
-        if (isCutScene == false)
+        if (isCutScene == false && isDasing == false)
         {
             if (Input.GetAxisRaw("Horizontal") == -1)
             {
@@ -135,10 +136,10 @@ public class Player : MonoBehaviour
 #region 점프관련
     private void JumpGamji()
     {
-        Debug.DrawRay(ri.position + new Vector2(0.2f, 0), Vector3.down, new Color(0,1,0));
-        Debug.DrawRay(ri.position + new Vector2(-0.2f, 0), Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D RaySir = Physics2D.Raycast(ri.position+new Vector2(0.2f,0), Vector3.down, 1, LayerMask.GetMask("Platform"));
-        if (ri.velocity.y < 0)
+        Debug.DrawRay(_rigidbody.position + new Vector2(0.2f, 0), Vector3.down, new Color(0,1,0));
+        Debug.DrawRay(_rigidbody.position + new Vector2(-0.2f, 0), Vector3.down, new Color(0, 1, 0));
+        RaycastHit2D RaySir = Physics2D.Raycast(_rigidbody.position+new Vector2(0.2f,0), Vector3.down, 1, LayerMask.GetMask("Platform"));
+        if (_rigidbody.velocity.y < 0)
         {
             if (RaySir.collider != null)
             {
@@ -149,8 +150,8 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        RaycastHit2D RaySir2 = Physics2D.Raycast(ri.position + new Vector2(-0.2f, 0), Vector3.down, 1, LayerMask.GetMask("Platform"));
-        if (ri.velocity.y < 0)
+        RaycastHit2D RaySir2 = Physics2D.Raycast(_rigidbody.position + new Vector2(-0.2f, 0), Vector3.down, 1, LayerMask.GetMask("Platform"));
+        if (_rigidbody.velocity.y < 0)
         {
             if (RaySir2.collider != null)
             {
@@ -168,30 +169,51 @@ public class Player : MonoBehaviour
         {
             Sound_Jump();
             animer.SetBool("Jump", true);
-            ri.AddForce(Vector3.up * JumpScale, ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector3.up * JumpScale, ForceMode2D.Impulse);
             DDang = true;
         }
     }
     #endregion
 
 #region 대쉬
-    void Dash()
-    {
-        if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true && _stageController.OnRealWorld == false)
-        {
-            Sound_Dash();
-            isDasing = true;
-            animer.SetBool("Dash", true);
-            ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
-            Invoke("EndDash", dashTime);
-        }
-    }
+    // void Dash()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.S) && isDasing == false && canDash == true && _stageController.OnRealWorld == false)
+    //     {
+    //         Sound_Dash();
+    //         isDasing = true;
+    //         animer.SetBool("Dash", true);
+    //         ri.AddForce(new Vector3(dashSpeed * Face, 0, 0), ForceMode2D.Impulse);
+    //         Invoke("EndDash", dashTime);
+    //     }
+    // }
     void EndDash()
     {
         isDasing = false;
         canDash = false;
         animer.SetBool("Dash", false);
         Invoke("AfterEndDash", 1f);
+    }
+
+    private void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.S) && isDasing == false&& canDash == true)
+        {
+            Sound_Dash();
+            isDasing = true;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * Face, dashSpeed, LayerMask.GetMask("Player"));
+            if (hit.transform != null)
+            {
+                Debug.Log(hit.transform.name);
+                Tweening.Instance.DOMove(_rigidbody, new Vector2(hit.point.x - Face, transform.position.y), 0.5f, EasingType.EaseInQuad);
+            }
+            else
+            {
+                Tweening.Instance.DOMove(_rigidbody, new Vector2(transform.position.x + dashSpeed * Face, transform.position.y), 1f, EasingType.EaseInBack);
+            }
+            animer.SetBool("Dash", true);
+            Invoke("EndDash", dashTime);
+        }
     }
     void AfterEndDash()
     {
@@ -202,8 +224,8 @@ public class Player : MonoBehaviour
 #region 감지
     void WallTamji()
     {
-        RaycastHit2D RaySist = Physics2D.Raycast(ri.position + new Vector2(0, -0.5f), Vector3.right * Face, 1f, LayerMask.GetMask("Platform"));
-        Debug.DrawRay(ri.position + new Vector2(0, -0.5f), Vector3.right * Face, new Color(0, 0.4f, 0));
+        RaycastHit2D RaySist = Physics2D.Raycast(_rigidbody.position + new Vector2(0, -0.5f), Vector3.right * Face, 1f, LayerMask.GetMask("Platform"));
+        Debug.DrawRay(_rigidbody.position + new Vector2(0, -0.5f), Vector3.right * Face, new Color(0, 0.4f, 0));
         if (RaySist.collider != null)
         {
                 animer.SetBool("Jump", false);
@@ -251,5 +273,10 @@ public class Player : MonoBehaviour
     public void SetPlayerCutSceneMode(bool parameter)
     {
         isCutScene = parameter;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Debug.DrawRay(transform.position, Vector2.right * Face * dashSpeed, Color.blue);
     }
 }
